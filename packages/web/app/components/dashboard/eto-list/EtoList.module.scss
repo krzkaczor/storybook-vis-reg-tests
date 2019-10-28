@@ -1,0 +1,11 @@
+.progress-section-layout {
+  @include media-breakpoint-up(md) {
+    grid-template: auto / repeat(4, 1fr);
+  }
+
+  @media (min-width: 1100px) {
+    grid-template: auto / repeat(6, 1fr);
+  }
+
+  grid-template: auto / repeat(2, 1fr);
+}

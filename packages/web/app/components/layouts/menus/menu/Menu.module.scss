@@ -1,0 +1,37 @@
+.menu {
+  @include media-breakpoint-up(md) {
+    display: grid;
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-gap: px-to-rem(24px);
+  }
+
+  grid-area: main-menu;
+  display: none;
+
+  grid-template: 100% / 1fr;
+  grid-gap: px-to-rem(24px);
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  justify-self: center;
+  align-self: stretch;
+  justify-items: stretch;
+}
+
+.account-menu {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.menu-button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.disabled {
+  opacity: .4;
+}

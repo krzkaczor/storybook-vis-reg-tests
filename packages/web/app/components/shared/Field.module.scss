@@ -1,0 +1,73 @@
+.rich-field,
+.rich-field > :global(.ck) {
+  word-break: break-word;
+
+  h2 {
+    @include headline-large;
+
+    margin-bottom: map-get($spacers, 3);
+  }
+
+  h3 {
+    @include headline-bigger;
+
+    margin-bottom: map-get($spacers, 2);
+  }
+
+  h4 {
+    @include font-headline;
+
+    margin-bottom: map-get($spacers, 2);
+  }
+
+  ul,
+  ol {
+    overflow: hidden;
+  }
+
+  :global {
+    .image {
+      @include media-breakpoint-down(xs) {
+        &.image-style-align-right,
+        &.image-style-align-left {
+          max-width: 100%;
+          float: none;
+          margin: {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(xs) {
+        &.image-style-align-right,
+        &.image-style-align-left {
+          max-width: 50%;
+        }
+
+        &.image-style-align-right {
+          float: right;
+          margin-left: map-get($spacers, 4);
+        }
+
+        &.image-style-align-left {
+          float: left;
+          margin-right: map-get($spacers, 4);
+        }
+      }
+
+      clear: both;
+      margin: 0 0 map-get($spacers, 3);
+      text-align: center;
+
+      > img {
+        max-width: 100%;
+      }
+
+      > figcaption {
+        padding: .6em;
+        font-size: .75em;
+      }
+    }
+  }
+}

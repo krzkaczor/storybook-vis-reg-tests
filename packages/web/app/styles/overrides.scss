@@ -1,0 +1,123 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "./mixins/index";
+@import "./variables/index";
+@import "./variables";
+@import "./global";
+@import "./react-slick-overrides";
+
+@import "./elements/a";
+@import "./elements/button";
+@import "./elements/form";
+@import "./elements/iframe";
+@import "./elements/img";
+@import "./elements/input";
+@import "./elements/label";
+@import "./elements/table";
+@import "./elements/textarea";
+@import "./elements/ul-ol";
+
+.form-group {
+  margin-bottom: $spacing-vertical-lg-1;
+}
+
+a,
+span {
+  justify-self: start;
+}
+
+a,
+button,
+input,
+textarea {
+  &,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.form-control {
+  @include font-default;
+
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid $neu-greyish-brown;
+  border-radius: 0;
+  color: $neu-greyish-brown;
+  font-size: px-to-rem(20px);
+  padding: 0 px-to-rem(10px) px-to-rem(4px);
+
+  &:disabled {
+    background-color: transparent;
+  }
+
+  &,
+  &.is-valid {
+    &,
+    &:focus {
+      background-color: transparent;
+      border-color: $neu-greyish-brown;
+    }
+  }
+}
+
+// overrides for default styles of libraries for auto complete: react-select, react-virtualized-select, react-virtualized
+// it is bypassing linter rules and our styleguide so code reassembles replaced one.
+// At this point we override rules only from react-select/dist/react-select.css
+// sass-lint:disable-all
+.Select-control {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.Select-input {
+  padding-left: 0;
+}
+
+.Select.is-focused:not(.is-open) > .Select-control {
+  box-shadow: none;
+}
+
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  padding-left: 0;
+}
+
+.Select-menu-outer {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  border-top-color: #ccc;
+}
+
+.modal {
+  .modal-dialog {
+    max-width: px-to-rem(600px);
+    display: flex;
+    justify-content: center;
+
+    &.big {
+      max-width: px-to-rem(800px);
+    }
+  }
+}
+
+.modal-content {
+  border: 0;
+  border-top: 3px solid $neu-piss-yellow;
+}
+
+.modal-backdrop {
+  background-color: $neu-charcoal-grey;
+
+  &:global(.show) {
+    opacity: 0.75;
+  }
+}
+
+

@@ -1,0 +1,80 @@
+.block {
+  $color-black: rgba($color-black, .55);
+  $color-blue: #0c6383;
+  $color-fluorescent-blue: #78d7dc;
+  $color-green-transparent: rgba($neu-seaweed, .1);
+  $color-gray: #aabcca;
+
+  &.theme-blue {
+    .block-background {
+      fill: $neu-pale-blue;
+    }
+
+    .block-border-bottom {
+      fill: $color-blue;
+    }
+  }
+
+  &.theme-fluorescent-blue {
+    .block-background {
+      fill: $color-green-transparent;
+    }
+
+    .block-border-bottom {
+      fill: $color-fluorescent-blue;
+    }
+  }
+
+  &.theme-green {
+    .block-background {
+      fill: $color-green-transparent;
+    }
+
+    .block-border-bottom {
+      fill: $neu-seaweed;
+    }
+  }
+
+  &.theme-gray {
+    .block-background {
+      fill: $neu-pale-blue;
+    }
+
+    .block-border-bottom {
+      fill: $neu-pale-grey;
+    }
+  }
+
+  &.theme-silver {
+    .block-background {
+      fill: $neu-pale-blue;
+    }
+
+    .block-border-bottom {
+      fill: $neu-silver;
+    }
+  }
+
+  &.theme-orange {
+    .block-background {
+      fill: $neu-bright-orange;
+      fill-opacity: .3;
+    }
+
+    .block-border-bottom {
+      fill: $neu-silver;
+    }
+  }
+}
+
+.block-text {
+  fill: $neu-slate-grey;
+  font-size: px-to-rem(10px);
+  text-transform: uppercase;
+}
+
+.block-background {
+  $color-gray-light: #c3d0d9;
+
+  fill: $neu-seaweed;
+}

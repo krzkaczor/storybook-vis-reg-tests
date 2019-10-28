@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
+  "scripts": {
+    "lint": "yarn workspaces run lint",
+    "test": "yarn workspaces run test",
+    "update-artifacts": "git submodule update --init --recursive",
+    "prepare": "yarn update-artifacts && yarn workspaces run prepare",
+    "deduplicate": "yarn-deduplicate",
+    "postinstall": "patch-package"
+  },
+  "devDependencies": {
+    "yarn-deduplicate": "^1.1.1",
+    "patch-package": "^6.1.0"
+  }
+}

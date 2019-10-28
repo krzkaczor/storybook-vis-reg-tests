@@ -1,0 +1,15 @@
+.DS_Store
+
+dist
+node_modules
+yarn-error.log
+.nyc_output
+.env
+.awcache
+.package-lock.json
+
+# IDE's ignores
+.vscode
+.idea
+platform-frontend.iml
+.env.cpy

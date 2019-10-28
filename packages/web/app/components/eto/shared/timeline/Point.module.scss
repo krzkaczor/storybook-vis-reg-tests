@@ -1,0 +1,36 @@
+.pointer {
+  fill: $neu-slate-grey;
+}
+
+.pointer-label,
+.date {
+  font-family: $headings-font-family;
+  font-size: px-to-rem(8px);
+  text-transform: uppercase;
+}
+
+.date {
+  fill: $neu-seaweed;
+}
+
+.date-past {
+  fill: $neu-bright-orange;
+}
+
+.pointer-label {
+  fill: $color-black;
+}
+
+.date-point {
+  fill: $neu-seaweed;
+  width: px-to-rem(3px);
+  height: px-to-rem(32px);
+  transform: translate(px-to-rem(32px), px-to-rem(4px));
+}
+
+.date-point-short {
+  fill: $neu-slate-grey;
+  width: px-to-rem(1px);
+  height: px-to-rem(16px);
+  transform: translate(px-to-rem(32px), px-to-rem(20px));
+}

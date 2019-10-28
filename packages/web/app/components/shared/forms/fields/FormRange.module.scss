@@ -1,0 +1,123 @@
+// sass-lint:disable no-vendor-prefixes
+$track-color: $neu-silver !default;
+$track-color-disabled: lighten($neu-silver, 10%) !default;
+$thumb-color: $color-green !default;
+$thumb-color-disabled: $neu-silver !default
+
+$thumb-radius: 8px !default;
+$thumb-height: 16px !default;
+$thumb-width: 16px !default;
+$thumb-border-width: 2px !default;
+
+$track-width: 100% !default;
+$track-height: 7px !default;
+$track-border-width: 0 !default;
+$track-border-color: #cfd8dc !default;
+
+$track-radius: 5px !default;
+$contrast: 5% !default;
+
+@mixin track {
+  cursor: pointer;
+  height: $track-height;
+  transition: background-color .2s ease;
+  width: $track-width;
+}
+
+@mixin thumb {
+  background-color: $thumb-color;
+  border-radius: $thumb-radius;
+  cursor: pointer;
+  height: $thumb-height;
+  width: $thumb-width;
+  transition: background-color .2s ease;
+
+  &:hover {
+    background-color: lighten($thumb-color, $contrast);
+  }
+}
+
+.current-value {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.range {
+  display: flex;
+}
+
+.label {
+  @include font-label-small;
+
+  color: $neu-slate-grey;
+  flex-shrink: 0;
+  min-width: px-to-rem(30px);
+  padding-top: px-to-rem(12px);
+}
+
+.label-details {
+  @include font-label-micro;
+}
+
+.input {
+  -webkit-appearance: none;
+  background-color: transparent;
+  flex-shrink: 0;
+  margin: $thumb-height / 2 px-to-rem(10px);
+  max-width: px-to-rem(280px);
+  width: $track-width;
+
+  &:focus {
+    outline: 0;
+
+    &::-webkit-slider-runnable-track {
+      background: lighten($track-color, $contrast);
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
+
+
+  &::-webkit-slider-thumb {
+    @include thumb;
+    appearance: none;
+    margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+  }
+
+  &::-moz-range-track {
+    @include track;
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+
+  &:disabled {
+    &::-webkit-slider-runnable-track {
+      background: $track-color-disabled;
+    }
+
+    &::-webkit-slider-thumb {
+      background-color: $thumb-color-disabled;
+    }
+
+    &::-moz-range-track {
+      background: $track-color-disabled;
+    }
+
+    &::-moz-range-thumb {
+      background-color: $thumb-color-disabled;
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+.modal {
+  width: 100%;
+  padding-top: 12px;
+  overflow: auto;
+
+  .header {
+    @include media-breakpoint-up (sm) {
+      margin-bottom: $spacing-vertical-sm-1;
+    }
+    align-self: start;
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    width: 100%;
+    height: 1rem;
+  }
+
+  .body {
+    width: 100%;
+  }
+}

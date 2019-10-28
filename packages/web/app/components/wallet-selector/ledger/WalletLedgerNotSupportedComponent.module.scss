@@ -1,0 +1,17 @@
+.browser-card-title {
+  text-transform: uppercase;
+  color: $blue-gray;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+}
+
+.browser-card-img {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.browser-card-link {
+  font-size: $font-size-lg;
+}

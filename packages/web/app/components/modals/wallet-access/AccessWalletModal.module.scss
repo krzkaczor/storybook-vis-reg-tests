@@ -1,0 +1,15 @@
+.info {
+  color: $gray6;
+}
+
+.title {
+  @include media-breakpoint-up (sm) {
+    font-size: 2.5rem;
+  }
+
+  font-size: 1.5rem;
+
+  & + div {
+    margin-top: px-to-rem(38px);
+  }
+}

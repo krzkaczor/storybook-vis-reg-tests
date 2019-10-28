@@ -1,0 +1,36 @@
+.section {
+  @include media-breakpoint-up(md) {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.title {
+  @include headline-large;
+  font-family: $headings-font-family;
+  font-size: 1.75rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.prompt {
+  @include font-headline-condensed;
+  text-align: center;
+  padding-left: 5%;
+  font-weight: 400;
+  padding-right: 5%;
+  margin: {
+    left: auto;
+    right: auto;
+  };
+}
+
+.missing-email {
+  @include font-headline-condensed;
+  text-align: center;
+  padding-left: 5%;
+  font-weight: 400;
+  padding-right: 5%;
+}

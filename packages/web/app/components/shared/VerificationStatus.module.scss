@@ -1,0 +1,64 @@
+.verification-status {
+  display: flex;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  position: relative;
+  z-index: $z-index-base;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $gray4;
+    position: absolute;
+    top: px-to-rem(8px);
+    right: -50%;
+    z-index: $z-index-under-base;
+  }
+
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.indicator {
+  user-select: none;
+  margin: 0 auto;
+  text-align: center;
+  line-height: px-to-rem(18px);
+  border: 1px solid $neu-piss-yellow;
+  border-radius: 50%;
+  color: $neu-piss-yellow;
+  height: px-to-rem(20px);
+  width: px-to-rem(20px);
+  background-color: $neu-white-two;
+  padding: 0;
+
+  &:global(.is-checked) {
+    background-color: $neu-piss-yellow;
+    color: $neu-white;
+  }
+
+  :global(.inline-icon) {
+    height: px-to-rem(20px);
+    width: px-to-rem(20px);
+    margin-top: -1px;
+    margin-left: -1px;
+  }
+}
+
+.label {
+  @include font-tab;
+
+  text-align: center;
+  margin-top: px-to-rem(10px);
+  text-transform: uppercase;
+}

@@ -1,0 +1,26 @@
+.header {
+  @include font-headline-medium;
+
+  margin-bottom: $spacing-vertical-lg-2;
+  text-align: center;
+}
+
+.progress-bar {
+  max-width: px-to-rem(450px);
+  margin: 0 auto $spacing-vertical-lg-4;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+@media(min-width: 576px) {
+  .form {
+    padding: $spacing-vertical-lg-4 $spacing-vertical-lg-2 $spacing-vertical-lg-2;
+  }
+}

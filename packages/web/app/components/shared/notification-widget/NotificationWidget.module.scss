@@ -1,0 +1,4 @@
+.widget {
+  @include responsive-size(margin-top, $authorized-layout-vertical-padding-sm, $authorized-layout-vertical-padding-lg);
+  @include responsive-size(margin-bottom, $authorized-layout-vertical-padding-sm, $authorized-layout-vertical-padding-lg);
+}

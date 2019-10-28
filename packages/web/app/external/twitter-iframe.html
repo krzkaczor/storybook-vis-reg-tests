@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Neufund Twitter Iframe</title>
+  </head>
+  <body>
+    <a
+      id="twitter"
+      class="twitter-timeline"
+      data-chrome="noheader nofooter noborders transparent"
+      data-tweet-limit="5"
+    ></a>
+    <script>
+      const a = document.getElementById("twitter");
+      const search = location.search.substring(1);
+      const query = JSON.parse(
+        '{"' +
+          decodeURI(search)
+            .replace(/"/g, '\\"')
+            .replace(/&/g, '","')
+            .replace(/=/g, '":"') +
+          '"}',
+      );
+      a.href = query.url;
+      a.innerText = "Tweets by " + query.user;
+    </script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+  </body>
+</html>

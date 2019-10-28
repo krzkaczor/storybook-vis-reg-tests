@@ -1,0 +1,56 @@
+// sass-lint:disable class-name-format
+// sass-lint:disable nesting-depth
+
+@import "../fields/FormStyles.module";
+
+$border-color: $neu-light-blue-grey-two;
+$border-color-focused: #c6d30d;
+
+.rich-text-area {
+  :global {
+    .ck {
+      &.ck-editor__editable {
+        @include font-default;
+
+        border: 1px solid $border-color;
+        color: $neu-greyish-brown;
+        padding: 1em;
+        min-height: px-to-rem(160px);
+
+        &.ck-read-only {
+          color: $neu-slate-grey;
+          cursor: not-allowed;
+
+          .ck-placeholder {
+            color: $neu-silver;
+          }
+        }
+
+        > :first-child {
+          margin-top: 0;
+        }
+
+        > :last-child {
+          margin-bottom: 0;
+        }
+
+        &:not(.ck-editor__nested-editable) {
+          &.ck-focused {
+            border: 1px solid $border-color-focused;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--invalid {
+    :global {
+      .ck {
+        &.ck-editor__editable {
+          border-color: $neu-bright-orange;
+        }
+      }
+    }
+  }
+}

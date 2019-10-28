@@ -1,0 +1,14 @@
+:global(.alert) {
+  &.alert {
+    border-color: $neu-seaweed;
+  }
+}
+
+.error-message {
+  @include font-thin;
+  padding: 12px 16px;
+  color: $neu-bright-orange;
+  border: solid 1px $neu-bright-orange;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}

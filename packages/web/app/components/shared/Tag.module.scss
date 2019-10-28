@@ -1,0 +1,86 @@
+.tag {
+  @include font-default;
+
+  $color-tag-base: rgb(196, 213, 236);
+  $color-tag-bg: rgba($color-tag-base, .14);
+
+  color: $neu-black;
+  background-color: $color-tag-bg;
+  border-radius: px-to-rem(3px);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: $font-weight-bold;
+  padding: px-to-rem(5px) px-to-rem(8px);
+  transition: 150ms ease-out background-color;
+
+  &--as-button {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.small {
+    @include font-button-small;
+
+    font-weight: normal;
+    padding-bottom: px-to-rem(2px);
+    padding-top: px-to-rem(2px);
+  }
+
+  &.tiny {
+    @include font-button-small;
+
+    font-weight: normal;
+    padding: px-to-rem(3px);
+  }
+
+  &:global(.ghost-bold) {
+    @include media-breakpoint-down(xs) {
+      font-size: .6rem;
+      padding: .2rem 1rem;
+    }
+
+    border: 2px solid currentColor;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding-left: px-to-rem(20px);
+    padding-right: px-to-rem(20px);
+    background-color: transparent;
+  }
+
+  &:global(.bold) {
+    text-transform: uppercase;
+  }
+
+  &:global(.ghost) {
+    border: 1px solid currentColor;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  &:global(.green) {
+    color: $neu-seaweed;
+  }
+
+  &:global(.silver) {
+    color: $neu-silver;
+  }
+
+  &:global(.dark) {
+    background-color: $neu-charcoal-grey;
+    color: $neu-white-two;
+  }
+
+  &:global(.white) {
+    color: $neu-white-two;
+  }
+
+  :global(.inline-icon) {
+    height: px-to-rem(12px);
+    width: px-to-rem(12px);
+    margin-right: px-to-rem(8px);
+  }
+}

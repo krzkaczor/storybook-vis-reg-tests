@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "name": "build-size-watcher",
+      "options": {
+        "files": [
+          {
+            "path": "dist/*.vendors~main.min.js",
+            "maxSize": "900kB"
+          },
+          {
+            "path": "dist/*.main.min.js",
+            "maxSize": "320kB"
+          },
+          {
+            "path": "dist/*.runtime~main.min.js",
+            "maxSize": "20kB"
+          },
+          {
+            "path": "dist/*.js"
+          },
+          {
+            "path": "dist/*.main.css",
+            "maxSize": "60kB"
+          },
+          {
+            "path": "dist/*.vendors~main.css",
+            "maxSize": "20kB"
+          },
+          {
+            "path": "dist/*.*.css"
+          }
+        ]
+      }
+    },
+    {
+      "name": "type-coverage-watcher",
+      "options": {
+        "tsconfigPath": "./tsconfig.json"
+      }
+    },
+    {
+      "name": "commit-deployment",
+      "options": {
+        "buildPath": "./dist"
+      }
+    }
+  ]
+}

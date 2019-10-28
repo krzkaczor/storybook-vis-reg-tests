@@ -1,0 +1,18 @@
+.token {
+  @include rect(25px);
+  display: inline-block;
+}
+
+.token-small {
+  @include rect(16px);
+}
+
+.token-name {
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.document-link {
+  margin-bottom: px-to-rem(16px);
+  text-align: left;
+}

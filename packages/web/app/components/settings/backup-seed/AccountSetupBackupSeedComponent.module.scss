@@ -1,0 +1,12 @@
+.account-setup-section {
+  display: grid;
+  grid-template: auto / auto;
+  grid-gap: 2rem;
+
+  justify-items: flex-start;
+  align-items: flex-start;
+}
+
+.account-setup-text {
+  margin: 0;
+}

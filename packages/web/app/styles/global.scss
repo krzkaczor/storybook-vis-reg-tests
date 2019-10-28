@@ -1,0 +1,57 @@
+@import "./neufund-theme";
+
+html,
+body,
+[id="app"] {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+  -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+
+  ::selection {
+    background-color: $neu-piss-yellow;
+    color: $neu-white-two;
+  }
+}
+
+.app-body {
+  background-color: $neu-charcoal-grey;
+}
+
+.wrapper {
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+  }
+
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100% - #{$header-height});
+  overflow-x: hidden;
+}
+
+.layout-container {
+  @include container-horizontal-padding;
+
+  @include media-breakpoint-up(sm) {
+    width: calc(100% - #{$authorized-menu-width-sm});
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: calc(100% - #{$authorized-menu-width-lg});
+  }
+
+  min-height: 100%;
+  max-width: 100%;
+  flex: 1;
+  padding-bottom: px-to-rem(80px);
+  -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes
+}
+
+.row-gutter-top {
+  &>div {
+    margin-top: $grid-gutter-width;
+  }
+}

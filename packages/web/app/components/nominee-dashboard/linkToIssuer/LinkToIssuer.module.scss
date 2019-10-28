@@ -1,0 +1,57 @@
+$border-color: $neu-light-blue-grey-two;
+$border-color-focused: $neu-charcoal-grey;
+
+.link-to-issuer-content-panel {
+  display: grid;
+  grid-gap: 2rem;
+  grid-auto-rows: auto auto 1fr;
+  justify-items: flex-start;
+  align-items: stretch;
+
+  background-color: $neu-white-two;
+  box-shadow: $shadow-bottom-black;
+  padding: $padding;
+}
+
+.title {
+  font-family: $font-family-roboto;
+  font-size: 24px;
+  line-height: 1.17;
+  margin: 0;
+}
+
+.text {
+  font-family: $font-family-roboto;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.error {
+  color: $neu-bright-orange;
+}
+
+.form {
+  justify-self: stretch;
+}
+
+.input {
+  font-family: $font-family-roboto;
+  border: 1px solid $border-color;
+  height: 48px;
+  padding: 0 12px;
+  border-radius: 4px;
+
+  &:focus {
+    border: 2px solid $border-color-focused;
+  }
+
+  &::placeholder {
+    color: $text-gray;
+  }
+}
+
+.form-error {
+  height: 21px;
+  margin: 4px 0 2rem;
+}

@@ -1,0 +1,60 @@
+.content-wrapper {
+  color: $neu-shuttle-gray;
+  font-size: 1rem;
+  @media (min-width: map-get($grid-breakpoints, "sm")) {
+    padding: 0 3.125rem;
+  }
+}
+
+.section--big {
+  font-size: px-to-rem(20px);
+}
+
+.label {
+  color: inherit;
+  font-size: inherit;
+  text-transform: none;
+}
+
+.etherscan-link {
+  font-size: 12px;
+}
+
+.money {
+  font-weight: bold;
+  color: $neu-charcoal-grey;
+
+  &--big {
+    font-size: px-to-rem(20px);
+  }
+}
+
+.tx-hash {
+  font-size: 80%;
+}
+
+.with-top-spacing {
+  margin-top: 1.5rem;
+}
+
+.with-spacing {
+  margin-bottom: 1.5rem;
+}
+
+.no-spacing {
+  margin-bottom: 0;
+}
+
+.compensate-spacing {
+  margin-top: px-to-rem(-22px);
+}
+
+.block {
+  color: $neu-shuttle-gray;
+  font-size: 80%;
+}
+
+.verified-user {
+  @include font-thin;
+  line-height: px-to-rem(24px);
+}

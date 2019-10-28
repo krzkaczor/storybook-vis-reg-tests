@@ -1,0 +1,12 @@
+.chart-legend {
+  align-items: center;
+  display: flex;
+
+  .indicator {
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: px-to-rem(5px);
+    height: px-to-rem(9px);
+    width: px-to-rem(9px);
+  }
+}

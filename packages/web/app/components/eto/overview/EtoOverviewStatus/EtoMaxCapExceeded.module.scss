@@ -1,0 +1,27 @@
+.max-cap-exceeded {
+  @include media-breakpoint-only(md) {
+    width: auto;
+    padding: 0 px-to-rem(15px);
+  }
+
+  display: flex;
+  align-items: normal;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  align-self: center;
+}
+
+.cap-reached {
+  color: $neu-seaweed;
+  text-align: right;
+}

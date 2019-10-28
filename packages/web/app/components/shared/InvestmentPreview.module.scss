@@ -1,0 +1,140 @@
+.investment-preview {
+  background-color: $neu-white-two;
+  display: flex;
+  flex-wrap: wrap;
+  padding: px-to-rem(15px);
+
+  &:global(.has-started) {
+    :local(.background) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+
+  .label {
+    @include font-label;
+
+    color: $neu-slate-grey;
+    margin-bottom: px-to-rem(5px);
+    text-transform: uppercase;
+  }
+
+  .logo-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $neu-pale-blue;
+    height: 60px;
+    width: 60px;
+    margin-right: px-to-rem(15px);
+  }
+
+  .company-details,
+  .pre-funding-status {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    padding-right: px-to-rem(20px);
+  }
+
+  .company-name {
+    @include font-headline;
+    font-weight: $font-weight-bold;
+    margin-bottom: px-to-rem(14px);
+  }
+
+  .pre-funding-status {
+    @include media-breakpoint-down (md) {
+      flex-basis: 100%;
+      margin-top: px-to-rem(20px);
+    }
+
+    .lead {
+      display: block;
+      color: $neu-black;
+    }
+
+    .hilight {
+      color: $color-black;
+    }
+
+    .pre-funding-wrapper {
+      border-top: px-to-rem(1px) solid $neu-pale-grey;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .labels {
+    display: flex;
+    flex-shrink: 0;
+    min-height: 1.3em;
+
+    .label {
+      @include make-col(3, 7);
+
+      padding-left: px-to-rem(10px);
+
+      &:last-of-type {
+        flex: 1;
+      }
+    }
+  }
+
+  .terms-and-eto {
+    @include media-breakpoint-down (md) {
+      flex-basis: 100%;
+      margin-top: px-to-rem(20px);
+    }
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+
+    .terms {
+      @include make-col(3, 7);
+
+      border-right: px-to-rem(1px) solid $neu-pale-grey;
+      padding-right: px-to-rem(20px);
+
+      strong {
+        color: $neu-black;
+      }
+    }
+
+    .eto {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: px-to-rem(20px);
+      padding-right: px-to-rem(20px);
+      flex-direction: column;
+    }
+  }
+
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: px-to-rem(16px) px-to-rem(10px);
+    background-color: $neu-pale-blue;
+    height: 100%;
+    flex-direction: column;
+
+    p {
+      margin-bottom: px-to-rem(8px);
+    }
+  }
+
+  > a {
+    @include media-breakpoint-down (md) {
+      margin-top: px-to-rem(15px);
+    }
+
+    align-self: center;
+  }
+}

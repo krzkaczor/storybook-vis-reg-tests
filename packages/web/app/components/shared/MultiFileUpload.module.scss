@@ -1,0 +1,123 @@
+$_dropzone-size-xl: 200px;
+$_dropzone-size-sm: 120px;
+
+.upload {
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    @include font-default;
+    color: $neu-greyish-brown;
+  }
+
+  .hint {
+    @include font-default;
+    color: $neu-slate-grey;
+  }
+
+  .upload-informations-wrapper {
+    padding-right: 40px;
+    margin-right: 40px;
+    border-right: 1px solid $neu-silver;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .id-wrapper,
+  .bank-statement-wrapper {
+    width: 46%;
+  }
+
+  .bank-statement-wrapper {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.multi-file-upload {
+
+  &:global(.horizontal) {
+    flex-direction: row;
+
+    :local(.dropzone) {
+      @include responsive-size(height, $_dropzone-size-sm, $_dropzone-size-xl);
+      @include responsive-size(width, $_dropzone-size-sm, $_dropzone-size-xl);
+
+      margin-right: 20px;
+    }
+  }
+
+  &:global(.vertical) {
+    flex-direction: column;
+
+    :local(.requirements-title) {
+      margin: $spacing-vertical-lg-1 0 $spacing-vertical-lg-2;
+    }
+
+    :local(.dropzone) {
+      @include rect($_dropzone-size-xl);
+    }
+  }
+}
+
+.title {
+  color: $neu-greyish-brown;
+}
+
+.file-info {
+  color: $neu-pale-grey;
+  font-size: 10px;
+  line-height: 2.4;
+}
+
+.dropzone {
+  align-items: center;
+  border: px-to-rem(2px) dashed $neu-silver;
+  color: $neu-slate-grey;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: px-to-rem(10px);
+  justify-content: space-around;
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 0;
+
+  :global {
+    .inline-icon {
+      @include responsive-size(width, 50px, 100px);
+      @include responsive-size(height, 50px, 96px);
+
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.document-wrapper {
+  @include media-breakpoint-up (md) {
+    padding-right: 20px;
+  }
+
+  padding-bottom: 20px;
+}
+
+.dropzone-wrapper {
+  display: flex;
+}
+
+.requirements-title {
+  @include font-default;
+  margin-bottom: 4px;
+}
+

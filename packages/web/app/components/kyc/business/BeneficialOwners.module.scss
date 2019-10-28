@@ -1,0 +1,26 @@
+.beneficial-owners {
+  .section-title {
+    font-size: px-to-rem(18px);
+    font-weight: 600;
+    letter-spacing: px-to-rem(-.3px);
+    margin-bottom: px-to-rem(30px);
+    margin-top: px-to-rem(30px);
+  }
+
+  .note {
+    $_border-color: rgba($neu-black, .1);
+
+    padding-top: px-to-rem(24px);
+    display: block;
+    max-width: px-to-rem(400px);
+    margin: 0 auto;
+    font-size: 11px;
+    line-height: 1.82;
+    color: $neu-slate-grey;
+    border-top: 1px solid $_border-color;
+  }
+
+  form {
+    margin-bottom: px-to-rem(60px);
+  }
+}

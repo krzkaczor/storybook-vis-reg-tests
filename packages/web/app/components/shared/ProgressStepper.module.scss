@@ -1,0 +1,18 @@
+.progress-stepper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: px-to-rem(26px);
+  margin-top: px-to-rem(50px);
+}
+
+.step {
+  margin: px-to-rem(3px);
+  height: px-to-rem(4px);
+  width: px-to-rem(18px);
+  background-color: $gray;
+}
+
+.active {
+  background-color: $neu-black;
+}

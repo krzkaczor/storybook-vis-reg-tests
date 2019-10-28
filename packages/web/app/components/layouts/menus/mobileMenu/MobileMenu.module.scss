@@ -1,0 +1,27 @@
+.mobile-menu {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  grid-area: mobile-menu;
+  justify-self: start;
+}
+
+.menu {
+  position: absolute;
+  top: $header-height-sm;
+  left: 0;
+
+  width: 100%;
+  height: calc(100vh - #{$header-height-sm});
+  background-color: $neu-white-two;
+  z-index: 3;
+  padding: 64px 0;
+}
+
+.menu-inner {
+  display: grid;
+  grid-template: 48px/1fr;
+  grid-gap: 12px;
+  width: 100%;
+}

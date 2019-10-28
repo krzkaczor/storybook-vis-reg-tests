@@ -1,0 +1,23 @@
+.bank-details {
+  display: flex;
+  align-items: center;
+}
+
+.kyc-data {
+  @include font-label;
+}
+
+.bank-number {
+  word-break: break-all;
+}
+
+.icon {
+  @include rect(38px);
+
+  margin-right: 18px;
+}
+
+.framed {
+  border: 1px solid $neu-pale-grey;
+  padding: px-to-rem(13px);
+}

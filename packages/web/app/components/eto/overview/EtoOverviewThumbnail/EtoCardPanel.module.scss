@@ -1,0 +1,19 @@
+.eto-card-panel {
+  grid-column: span 2;
+
+  &--is-button {
+    transition: transform .1s ease-in-out;
+    background-color: $neu-white-two;
+    border: 0;
+    padding: 0;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.02);
+      box-shadow: $shadow-bottom-black-long;
+    }
+  }
+}
+
+

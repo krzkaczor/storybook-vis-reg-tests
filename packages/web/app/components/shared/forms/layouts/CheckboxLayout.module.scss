@@ -1,0 +1,102 @@
+$indicator-size: 16px;
+
+.checkbox {
+  cursor: pointer;
+
+  &.layout-inline {
+    display: inline-flex;
+  }
+
+  &.layout-block {
+    display: flex;
+    padding: px-to-rem(8px) 0;
+  }
+
+  :global(.form-group) & {
+    align-items: start;
+    flex-wrap: nowrap;
+  }
+}
+
+.input {
+  // only hide checkbox on screen. In print, show the real checkbox, because of print display problems
+  @media screen {
+    @include sr-only;
+  }
+
+  &[type="radio"] + .indicator {
+    &,
+    &::after {
+      border-radius: 50%;
+    }
+  }
+
+  &:checked + .indicator {
+    &::after {
+      @include rect($indicator-size - 6px);
+    }
+  }
+
+  &:required {
+    ~ .label {
+      &::after {
+        content: "*";
+      }
+    }
+  }
+
+  &:disabled {
+    ~ .indicator,
+    ~ .label {
+      cursor: not-allowed;
+    }
+
+    ~ .indicator {
+      &::after {
+        background-color: $neu-silver;
+      }
+    }
+  }
+}
+
+.indicator {
+  @include rect($indicator-size);
+
+  border: 1px solid $color-black;
+  position: relative;
+
+  &::after {
+    @include rect(0);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-green;
+    content: " ";
+    transition: 200ms $ease-out-expo;
+    transition-property: width, height;
+  }
+
+  // display raw input in print
+  @media print {
+    display: none;
+  }
+}
+
+.label {
+  @include font-label;
+
+  color: $neu-slate-grey;
+  font-weight: normal;
+  padding-left: px-to-rem(20px);
+  padding-right: px-to-rem(20px);
+  text-align: left;
+  text-transform: none;
+  user-select: none;
+
+  &::after {
+    font-size: .5em;
+    vertical-align: super;
+  }
+}

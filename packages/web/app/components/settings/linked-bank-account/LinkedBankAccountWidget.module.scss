@@ -1,0 +1,25 @@
+.bank-account-button-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+
+.bank-account-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $neu-pale-grey;
+  padding: px-to-rem(15px) px-to-rem(20px);
+  width: 100%;
+}
+
+.icon {
+  @include rect(38px);
+
+  margin-right: 18px;
+}
+
+.link-button {
+  color: $neu-blue;
+  text-align: right;
+}

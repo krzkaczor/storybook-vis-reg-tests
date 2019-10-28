@@ -1,0 +1,18 @@
+.counter-widget {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  @include font-default;
+
+  margin-bottom: px-to-rem(8px);
+  text-transform: uppercase;
+}
+
+.zone {
+  @include font-label;
+
+  color: $neu-bright-orange;
+  margin-bottom: px-to-rem(8px);
+}

@@ -1,0 +1,18 @@
+.button-group {
+  &.size-normal {
+    margin: -10px -15px;
+
+    > * {
+      margin: 10px 15px;
+    }
+  }
+
+  &.size-small {
+    margin: -8px -10px;
+
+    > * {
+      margin: 8px 10px;
+    }
+  }
+}
+

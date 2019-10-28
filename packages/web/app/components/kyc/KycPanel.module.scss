@@ -1,0 +1,58 @@
+.kyc-panel {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  max-width: px-to-rem(1000px);
+  margin: 0 auto;
+
+}
+
+.header {
+  margin: px-to-rem(46px) 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: px-to-rem(46px);
+}
+
+.description {
+  font-size: px-to-rem(16px);
+  max-width: 90%;
+  text-align: center;
+  margin-top: px-to-rem(46px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  padding-top: px-to-rem(72px);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-narrow {
+  align-self: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: px-to-rem(630px);
+  padding-top: px-to-rem(72px);
+  display: flex;
+}
+
+.text-field-narrow {
+  align-self: center;
+  width: 100%;
+  max-width: px-to-rem(630px);
+}
+
+.no-top-padding {
+  padding-top: 0;
+}
+
+.footer {
+  min-height: px-to-rem(1px);
+  padding-bottom: px-to-rem(10px);
+  padding-left: px-to-rem(14px);
+}
+

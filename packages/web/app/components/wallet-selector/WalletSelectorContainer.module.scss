@@ -1,0 +1,10 @@
+.wallet-selector-container {
+  @include media-breakpoint-up(sm) {
+    box-shadow: $shadow;
+    border-top: px-to-rem(3px) solid $neu-piss-yellow;
+    margin-top: px-to-rem(100px);
+  }
+
+  padding: 1.5rem;
+  background-color: $neu-white-two;
+}

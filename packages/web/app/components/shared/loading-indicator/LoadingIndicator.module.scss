@@ -1,0 +1,76 @@
+$loading-indicator-color: #333;
+
+@keyframes curve {
+  0% {
+    background-color: darken($neu-piss-yellow, 20%);
+    transform: rotateY(-90deg) perspective(50px);
+  }
+
+  50% {
+    background: lighten($neu-piss-yellow, 20%);
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    background: darken($neu-piss-yellow, 20%);
+    transform: rotateY(90deg) perspective(50px);
+    transform-origin: 100% 50%;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.pulse {
+  @include circle(2.5rem);
+
+  animation: sk-scaleout 1s infinite ease-in-out;
+  background-color: $loading-indicator-color;
+  margin: 6.25rem auto;
+}
+
+.blocks {
+  span {
+    @include rect(15px);
+
+    background-color: $neu-piss-yellow;
+    display: inline-block;
+    transform-origin: 0 50%;
+
+    $i: 1;
+
+    @while ($i < 6) {
+      &:nth-of-type(#{$i}) {
+        animation: cuve 1s ($i * .5s) infinite;
+      }
+
+      $i: $i + 1;
+    }
+   }
+}
+
+.light {
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: rotate 2s infinite linear;
+  color: $neu-piss-yellow;
+  height: px-to-rem(20px);
+  width: px-to-rem(20px);
+}

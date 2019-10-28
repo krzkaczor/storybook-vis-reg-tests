@@ -1,0 +1,15 @@
+.wordd {
+  @include media-breakpoint-up (sm) {
+    margin-top: 2.5rem;
+  }
+}
+
+.word {
+  background-color: $neu-pale-blue;
+  font-weight: $font-weight-bold;
+}
+
+.page-status {
+  font-size: $smaller-font-size;
+  font-weight: $font-weight-bold;
+}

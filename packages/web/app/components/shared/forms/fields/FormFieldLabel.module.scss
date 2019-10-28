@@ -1,0 +1,11 @@
+.form-label {
+  @include font-label;
+
+  color: $neu-greyish-brown;
+  margin-bottom: px-to-rem(8px);
+}
+
+.inherit-font {
+  font-size: inherit;
+  color: inherit;
+}

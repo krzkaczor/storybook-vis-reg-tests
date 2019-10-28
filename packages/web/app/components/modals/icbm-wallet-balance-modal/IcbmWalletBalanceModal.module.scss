@@ -1,0 +1,63 @@
+.wrapper {
+  margin-bottom: $spacing-vertical-lg-1;
+}
+
+.highlighted-field {
+  background-color: $neu-pale-blue;
+  color: $neu-greyish-brown;
+  font-size: 15px;
+  margin-bottom: 14px;
+  padding: 12px;
+}
+
+.highlighted-header {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.icon {
+  @include rect(20px);
+
+  margin-right: 6px;
+}
+
+.content {
+  max-width: 400px;
+  margin: 0 auto;
+
+  :global(.button) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  margin-bottom: $spacing-vertical-lg-1;
+}
+
+.footer {
+  font-size: 12px;
+  letter-spacing: -.2px;
+  text-align: center;
+}
+
+.description {
+  font-size: px-to-rem(12px);
+  letter-spacing: px-to-rem(-.2px);
+}
+
+.animated-ethereum {
+  transform: scale(.3);
+  height: 110px !important; // sass-lint:disable-line no-important
+  width: 60px !important; // sass-lint:disable-line no-important
+}
+
+.footer-success,
+.footer-waiting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}

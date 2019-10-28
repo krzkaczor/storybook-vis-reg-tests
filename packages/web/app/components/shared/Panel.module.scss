@@ -1,0 +1,28 @@
+// TODO: Maybe it's possible to somehow provide which margins should be reset
+@mixin remove-panel-padding($narrow: false) {
+  margin: if($narrow, -$narrow-padding, -$padding);
+  width: calc(100% + 2 * #{if($narrow, $narrow-padding, $padding)});
+}
+
+.panel {
+  background-color: $neu-white-two;
+  box-shadow: $shadow-bottom-black;
+  padding: $padding;
+  height: 100%;
+  align-items: stretch;
+  grid-auto-rows: 1fr auto;
+
+  &.narrow {
+    padding: $narrow-padding;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-vertical-sm-1;
+  width: 100%;
+
+  align-self: start;
+}

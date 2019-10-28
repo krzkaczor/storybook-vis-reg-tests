@@ -1,0 +1,127 @@
+.table {
+  width: 100%;
+
+  thead {
+    text-transform: uppercase;
+    color: $neu-white;
+    background-color: $neu-charcoal-grey;
+    font-size: $smaller-font-size;
+    font-weight: $font-weight-bold;
+
+    th {
+      padding: map-get($spacers, 2);
+    }
+  }
+
+  td {
+    padding: 0 map-get($spacers, 2);
+  }
+
+  tbody {
+    border-bottom: #{px-to-rem(1px)} solid $neu-pale-grey;
+
+    tr {
+      &:nth-of-type(odd) {
+        background-color: $neu-pale-blue;
+      }
+    }
+  }
+
+  tfoot {
+    td {
+      padding-top: map-get($spacers, 2);
+    }
+  }
+
+  $logo-size: 24px;
+
+  .pseudo-border-left {
+    position: relative;
+
+    &::before {
+      content: " ";
+      border-left: #{px-to-rem(1px)} solid $neu-pale-grey;
+      display: block;
+      position: absolute;
+      height: calc(1.4 * (#{$logo-size} + #{map-get($spacers, 3)}));
+      left: 0;
+      top: calc(.3 * (#{$logo-size} + #{map-get($spacers, 3)}));
+    }
+  }
+
+  .balance {
+    div {
+      min-height: calc(#{$logo-size} + #{map-get($spacers, 3)});
+      line-height: calc(#{$logo-size} + #{map-get($spacers, 3)});
+      padding-left: calc(2 * #{map-get($spacers, 2)} + #{px-to-rem($logo-size)});
+      background: no-repeat map-get($spacers, 2) center / #{px-to-rem($logo-size)};
+    }
+
+    .eth {
+      background-image: url("../../../assets/img/eth_icon.svg");
+    }
+
+    .neu {
+      background-image: url("../../../assets/img/neu_icon.svg");
+    }
+  }
+
+  .select {
+    text-align: center;
+  }
+
+  @include media-breakpoint-down(md) {
+    thead {
+      display: none !important; // sass-lint:disable-line no-important
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    .pseudo-border-left {
+      &::before {
+        display: none;
+      }
+    }
+
+    .balance {
+      div {
+        padding-left: calc(#{px-to-rem($logo-size)} + #{map-get($spacers, 2)});
+        background-size: #{px-to-rem($logo-size)} #{px-to-rem($logo-size)};
+        background-position: left center;
+      }
+    }
+
+    tbody {
+      td {
+        &::before {
+          display: block;
+          font-size: .688rem;
+          margin-top: map-get($spacers, 1);
+        }
+
+        &:nth-of-type(1) {
+          &::before {
+            content: "Derivation path";
+          }
+        }
+
+        &:nth-of-type(2) {
+          &::before {
+            content: "Public key";
+          }
+        }
+      }
+    }
+
+    .select {
+      padding-bottom: map-get($spacers, 3);
+    }
+  }
+}

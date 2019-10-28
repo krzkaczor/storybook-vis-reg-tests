@@ -1,0 +1,39 @@
+.counter {
+  display: flex;
+  justify-content: center;
+}
+
+.plate {
+  @include font-headline;
+
+  color: $neu-black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: px-to-rem(44px);
+  height: px-to-rem(32px);
+  background-color: $neu-pale-grey;
+  margin: 0 px-to-rem(4px);
+}
+
+.blink {
+  @keyframes blinker {
+    from {
+      color: $neu-black;
+    }
+
+    to {
+      color: transparent;
+    }
+  }
+
+  animation: blinker 1s ease-in-out infinite;
+}
+
+.label {
+  margin-top: px-to-rem(6px);
+  font-size: px-to-rem(12px);
+  font-weight: $font-weight-light;
+  text-align: center;
+  text-transform: uppercase;
+}

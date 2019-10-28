@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: px-to-rem(11px);
+}
+
+.record {
+  display: flex;
+  min-height: px-to-rem(26px);
+}
+
+.label {
+  flex-basis: 50%;
+  font-weight: $font-weight-bold;
+  flex-shrink: 0;
+}
+
+.details {
+  color: $neu-silver;
+  font-size: 10px;
+  letter-spacing: -.2px;
+}
+
+.image {
+  width: px-to-rem(28px);
+}
+
+.explanation {
+  margin-top: 1.25rem;
+}

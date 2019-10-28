@@ -1,0 +1,35 @@
+.investment-widget {
+  @include media-breakpoint-only(md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  @include font-label;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.invest-now-button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.end-time {
+  @include font-label;
+
+  color: $neu-bright-orange;
+  margin-top: px-to-rem(10px);
+}
+

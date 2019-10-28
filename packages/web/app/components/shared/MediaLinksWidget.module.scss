@@ -1,0 +1,10 @@
+.link {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-decoration: underline;
+  border-bottom: 1px solid $neu-silver;
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}

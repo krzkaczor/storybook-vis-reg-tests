@@ -1,0 +1,10 @@
+$panel-height: px-to-rem(170px);
+
+.panel-body {
+  min-height: $panel-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-all;
+  justify-self: stretch;
+}

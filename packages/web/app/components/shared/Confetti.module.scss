@@ -1,0 +1,196 @@
+$animation-duration: 1.2s;
+
+$yellow-orange: #ffb534;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.cannon {
+  position: absolute;
+  left: 50%;
+  top: 1em;
+  bottom: 1em;
+  width: 1px;
+  transform-origin: 50% 100%;
+  animation: cannon-explosion $animation-duration cubic-bezier(.18, .89, .32, 1.28) both;
+  animation-iteration-count: infinite;
+
+  // Paths
+  .path {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: 50% 100%;
+    padding-bottom: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &-lg {
+      height: 100%;
+    }
+
+    &-md {
+      height: 95%;
+    }
+
+    &-sm {
+      height: 90%;
+    }
+
+    &-angle {
+      &-m2 {
+        transform: rotate(-19deg);
+      }
+
+      &-m1 {
+        transform: rotate(-9.5deg);
+      }
+
+      &-1 {
+        transform: rotate(9.5deg);
+      }
+
+      &-2 {
+        transform: rotate(19deg);
+      }
+    }
+  }
+
+  .confetti {
+    flex: 0 1 auto;
+    animation-duration: $animation-duration;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+
+    &:nth-child(even) {
+      animation-name: confetti-rotate-l;
+      @keyframes confetti-rotate-l {
+        0% {
+          transform: rotate(0) scaleY(1);
+        }
+
+        50% {
+          transform: rotate(2turn) scaleY(1.5);
+        }
+
+        100% {
+          transform: rotate(2.05turn) scaleY(1);
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      animation-name: confetti-rotate-r;
+      @keyframes confetti-rotate-r {
+        0% {
+          transform: rotate(0) scaleY(1);
+        }
+
+        50% {
+          transform: rotate(-2turn) scaleY(1.5);
+        }
+
+        100% {
+          transform: rotate(-2.05turn) scaleY(1);
+        }
+      }
+    }
+
+    &-ribbon {
+      height: .7em;
+      width: .3em;
+      border-radius: .1em;
+    }
+
+    &-flake {
+      height: .3em;
+      width: .3em;
+      border-radius: 50%;
+    }
+
+  }
+}
+
+// Sizes
+
+.size-normal {
+  .cannon {
+    font-size: 12px;
+  }
+}
+
+.size-small {
+  .cannon {
+    font-size: 3px;
+  }
+}
+
+// Themes
+
+.theme-colorful {
+  .cannon {
+    .confetti {
+      &-color-1 {
+        background-color: $neu-bright-orange;
+      }
+
+      &-color-2 {
+        background-color: $neu-seaweed;
+      }
+
+      &-color-3 {
+        background-color: $yellow-orange;
+      }
+
+      &-color-4 {
+        background-color: $neu-piss-yellow;
+      }
+    }
+  }
+}
+
+.theme-green {
+  .cannon {
+    .confetti {
+      &-color-1 {
+        background-color: $neu-piss-yellow;
+      }
+
+      &-color-2 {
+        background-color: $neu-piss-yellow;
+      }
+
+      &-color-3 {
+        background-color: $neu-piss-yellow;
+      }
+
+      &-color-4 {
+        background-color: $neu-piss-yellow;
+      }
+    }
+  }
+}
+
+@keyframes cannon-explosion {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

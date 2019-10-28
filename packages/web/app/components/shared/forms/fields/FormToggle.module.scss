@@ -1,0 +1,61 @@
+$indicator-size: 24px;
+$track-border-width: 2px;
+$track-width: 48px;
+
+.toggle {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  user-select: none;
+}
+
+.input {
+  @include sr-only;
+
+  &:disabled {
+    ~ .track {
+      background-color: $neu-silver;
+      border: $track-border-width solid $neu-silver;
+      cursor: not-allowed;
+      opacity: .5;
+    }
+  }
+
+  &:checked {
+    ~ .track {
+      color: $color-green;
+
+      .indicator {
+        transform: translateX($track-width - $indicator-size - 2 * $track-border-width);
+      }
+    }
+  }
+}
+
+.toggle-wrapper {
+  margin: 0 20px;
+}
+
+.track {
+  @include rect($track-width, auto);
+
+  background-color: currentColor;
+  border-radius: $track-width / 2;
+  border: $track-border-width solid currentColor;
+  color: $neu-silver;
+  cursor: pointer;
+  transition: 300ms $ease-out-expo background-color;
+
+  &:hover {
+    opacity: .9;
+  }
+}
+
+.indicator {
+  @include circle($indicator-size);
+
+  background-color: $neu-white-two;
+  box-shadow: $shadow1;
+  transition: 200ms $ease-out-expo transform;
+  will-change: transform;
+}

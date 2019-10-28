@@ -1,0 +1,57 @@
+.container {
+  :global(.row) {
+    margin: 1.5rem 0;
+  }
+}
+
+.invest-input {
+  &::placeholder {
+    font-size: .9em;
+  }
+}
+
+.invest-all {
+  margin-top: .25rem;
+  text-align: right;
+  color: $neu-blue;
+}
+
+.icon {
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: .5em;
+}
+
+.equals {
+  text-align: center;
+  font-size: 3em;
+}
+
+.green {
+  padding: 1px px-to-rem(25px) .5em;
+  background-color: $neu-seaweed-bg;
+  margin-left: px-to-rem(-25px);
+  margin-right: px-to-rem(-25px);
+
+  :global(.alert),
+  :global(.form-group) {
+    margin-bottom: 0;
+  }
+
+  label {
+    margin-bottom: .25rem;
+  }
+}
+
+.summary {
+  text-align: center;
+}
+
+.investment-price-info {
+  @include font-headline-small;
+}
+
+.help-text {
+  color: $text-gray;
+  text-align: right;
+}

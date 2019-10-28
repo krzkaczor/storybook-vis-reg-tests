@@ -1,0 +1,51 @@
+.main {
+  @include media-breakpoint-down(md) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.welcome {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.content-wrapper {
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.header {
+  @include font-headline-small;
+
+  text-transform: uppercase;
+}
+
+.counter-widget {
+  margin: 15px auto;
+}
+
+.incoming-value  {
+  display: inline-block;
+  font-size: 19px;
+  margin: 12px 4px;
+}
+
+.statement-text {
+  @include font-thin;
+
+  color: $neu-greyish-brown;
+  margin: 0 auto;
+}

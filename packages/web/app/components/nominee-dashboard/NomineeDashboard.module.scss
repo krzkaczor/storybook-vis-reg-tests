@@ -1,0 +1,133 @@
+.account-setup-wrapper {
+  max-width: 748px;
+  margin: 0 auto;
+}
+
+.account-setup-container {
+  display: grid;
+  grid-gap: 5px;
+}
+
+.nominee-dashboard-container {
+  max-width: 748px;
+  margin: 0 auto;
+}
+
+.linked-nominee-dashboard-container {
+  display: grid;
+  grid-template: 1fr / 748px 360px;
+  grid-gap: 32px;
+
+  align-items: flex-start;
+}
+
+.dashboard-title-wrapper {
+  margin: 2rem 0;
+}
+
+.dashboard-title {
+  font-family: $font-family-roboto;
+  font-weight: 500;
+  font-size: 32px;
+  margin: 0;
+}
+
+.dashboard-text {
+  font-family: $font-family-roboto;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+.dashboard-content-panel {
+  display: grid;
+  grid-gap: 2rem;
+  justify-items: flex-start;
+  align-items: stretch;
+  grid-auto-rows: 1fr auto;
+
+  background-color: $neu-white-two;
+  box-shadow: $shadow-bottom-black;
+  padding: $padding;
+}
+
+.dashboard-content-title {
+  font-family: $font-family-roboto;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.dashboard-content-text {
+  margin: 0;
+  font-family: $font-family-roboto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.status {
+  height: 1.5rem;
+  padding: 3px 12px;
+  border: 1px solid $neu-bright-orange;
+  border-radius: 3px;
+  vertical-align: middle;
+
+  font-size: 12px;
+  color: $neu-bright-orange;
+  text-transform: uppercase;
+}
+
+.account-setup-step-wrapper {
+  display: grid;
+  grid-template: auto auto / auto 1fr;
+  grid-template-areas: "ticker title" "line component";
+  grid-row-gap: 5px;
+  grid-column-gap: 8px;
+}
+
+.ticker {
+  grid-area: ticker;
+  width: 24px;
+  height: 24px;
+
+  background-color: $text-gray;
+  border-radius: 12px;
+
+  font-family: $font-family-roboto;
+  text-align: center;
+  color: $neu-pale-grey-two;
+  font-size: 16px;
+  font-weight: 500;
+
+  &.active,
+  &.done {
+    background-color: $ticker-blue-two;
+  }
+}
+
+.title {
+  grid-area: title;
+  font-family: $font-family-roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.component-open {
+  grid-area: component;
+  margin: 20px 20px 27px 0;
+}
+
+.component-closed {
+  height: 16px;
+
+  &.last {
+    display: none;
+  }
+}
+
+.line {
+  width: 2px;
+  height: 100%;
+  background-color: $new-gray-two;
+  margin: 0 auto;
+}

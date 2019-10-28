@@ -1,0 +1,32 @@
+.token-symbol-widget {
+  @include media-breakpoint-up(md) {
+    margin-top: px-to-rem(10px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: px-to-rem(20px);
+    margin-top: px-to-rem(28px);
+  }
+
+  display: flex;
+
+  margin-top: px-to-rem(20px);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.token-image-wrapper {
+  margin-right: 10px;
+}
+
+.token-image {
+  @include responsive-size(width, 34px, 70px);
+  @include responsive-size(height, 34px, 70px);
+}
+
+.token-name {
+  @include font-label;
+
+  color: $neu-slate-grey;
+  margin: 0;
+}

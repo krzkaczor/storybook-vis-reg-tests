@@ -1,0 +1,62 @@
+.transaction-data {
+  &.huge {
+    .top {
+      @include font-headline;
+    }
+
+    .bottom {
+      @include font-headline-small;
+    }
+  }
+
+  &.large {
+    .top {
+      @include font-headline-medium;
+    }
+  }
+
+  &.medium {
+    .top {
+      @include font-headline-small;
+    }
+  }
+
+  &.black {
+    .top {
+      font-weight: bold;
+      color: $neu-charcoal-grey;
+    }
+
+    .bottom {
+      color: $neu-shuttle-gray;
+    }
+  }
+
+  &.black-thin {
+    .top {
+      color: $neu-charcoal-grey;
+    }
+
+    .bottom {
+      color: $neu-shuttle-gray;
+    }
+  }
+
+  &.silver {
+    .top {
+      color: $neu-slate-grey;
+    }
+
+    .bottom {
+      color: $neu-silver;
+    }
+  }
+
+  .top {
+    @include font-default;
+  }
+
+  .bottom {
+    @include font-tab;
+  }
+}

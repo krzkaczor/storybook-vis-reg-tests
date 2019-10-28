@@ -1,0 +1,7 @@
+app/lib/contracts
+intl/messages
+cypress/videos
+cypress/screenshots
+__screenshots__
+.reg
+storybook-static

@@ -1,0 +1,13 @@
+.wallet-chooser-title {
+  font-family: $headings-font-family;
+  font-size: .825rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.wallet-chooser-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+

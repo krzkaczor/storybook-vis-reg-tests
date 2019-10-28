@@ -1,0 +1,19 @@
+.image {
+  width: 270px;
+  margin-bottom: px-to-rem(28px);
+}
+
+.tos-link {
+  font-size: .9rem;
+  font-weight: 700;
+  color: $neu-black;
+}
+
+.button-block {
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+
+  margin: 1.5rem 0;
+}

@@ -1,0 +1,62 @@
+.social-profiles-editor {
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: px-to-rem(16px);
+  }
+
+  .input-wrapper {
+    display: none;
+    position: relative;
+
+    &:global(.is-visible) {
+      display: flex;
+    }
+
+    + .input-wrapper {
+      margin-top: px-to-rem(20px);
+    }
+  }
+
+  input {
+    padding-right: px-to-rem(36px);
+  }
+}
+
+.link-wrapper {
+  color: $neu-cloudy-blue;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+
+  :global(.inline-icon) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.tab {
+  @include rect(30px);
+
+  color: $neu-cloudy-blue;
+  cursor: pointer;
+  margin-bottom: px-to-rem(15px);
+  margin-right: px-to-rem(20px);
+  transition: $ease-out-expo 300ms color;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  &:global(.is-selected) {
+    color: $neu-charcoal-grey;
+
+    &:hover {
+      color: lighten($neu-charcoal-grey, 10%);
+    }
+  }
+
+  &:hover {
+    color: lighten($neu-charcoal-grey, 5%);
+  }
+}

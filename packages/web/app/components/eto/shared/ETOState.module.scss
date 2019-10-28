@@ -1,0 +1,60 @@
+@mixin _set-indicator-color($eto-stage, $color) {
+  &.#{unquote($eto-stage)} {
+    &::before {
+      background-color: $color;
+    }
+
+  }
+}
+
+.project-status {
+  text-transform: uppercase;
+  color: $neu-greyish-brown;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: -.2px;
+
+  &::before {
+    display: block;
+    content: "";
+    width: px-to-rem(14px);
+    height: px-to-rem(14px);
+    margin-right: px-to-rem(8px);
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: transparent;
+  }
+
+  &:global(.small) {
+    &::before {
+      width: px-to-rem(8px);
+      height: px-to-rem(8px);
+    }
+  }
+
+  &:global(.large) {
+    font-size: 16px;
+  }
+
+  &:global(.huge) {
+    font-size: 20px;
+  }
+
+  &:global(.black) {
+    color: $neu-black;
+  }
+
+  &:global(.inherit) {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  // default states
+  @include _set-indicator-color(green, $green-light);
+  @include _set-indicator-color(black, $black);
+  @include _set-indicator-color(blue, $blue-light);
+  @include _set-indicator-color(red, $neu-red);
+  @include _set-indicator-color(orange, $neu-bright-orange);
+}

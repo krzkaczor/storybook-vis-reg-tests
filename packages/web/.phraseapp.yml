@@ -1,0 +1,15 @@
+phraseapp:
+  access_token: c483ac9fb8a51d399afcd6cd74ec2e707c8c24e1747412482cab055d7eb57fa8
+  project_id: 6c987746f39a4c910f601940bba9b912
+  push:
+    sources:
+    - file: ./intl/locales/en-en.json
+      params:
+        file_format: simple_json
+        locale_id: en
+  pull:
+    targets:
+    - file: ./intl/locales/en-en.json
+      params:
+        file_format: simple_json
+        locale_id: en

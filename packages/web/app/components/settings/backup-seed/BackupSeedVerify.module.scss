@@ -1,0 +1,48 @@
+.verification-block {
+  @include media-breakpoint-up (sm) {
+    grid-template: auto / repeat(2, 1fr);
+    margin-top: 3rem;
+  }
+
+  @include media-breakpoint-up (lg) {
+    grid-template: auto / repeat(4, 1fr);
+  }
+
+  display: grid;
+  grid-template: auto / 100%;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.word {
+  min-width: 10rem;
+}
+
+// sass-lint:disable no-important
+.invalid {
+  :global(.Select-control) {
+    border-color: $neu-bright-orange !important;
+  }
+}
+
+.valid {
+  :global(.Select-control) {
+    border-color: $neu-seaweed !important;
+  }
+}
+
+.placeholder-height {
+  min-height: px-to-rem(38px) !important;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  max-width: 100%;
+}
+
+.center {
+  justify-content: center;
+}

@@ -1,0 +1,11 @@
+.icon {
+  margin-right: 6px;
+  width: px-to-rem(20px);
+  height: px-to-rem(20px);
+  vertical-align: middle;
+  color: $neu-seaweed;
+
+  &:disabled {
+    cursor: wait;
+  }
+}

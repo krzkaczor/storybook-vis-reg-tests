@@ -1,0 +1,62 @@
+.notification-wrapper {
+  position: relative;
+
+  &:not(:first-child) {
+    margin-top: map-get($spacers, 4);
+  }
+}
+
+.notification {
+  @include make-col(1, 1);
+  @include font-default;
+
+  @include media-breakpoint-up (md) {
+    flex-direction: row;
+  }
+
+  box-shadow: $shadow-bottom-black-light;
+  display: flex;
+  flex-direction: column;
+  padding: px-to-rem(10px) px-to-rem(12px);
+
+  &:global {
+    &.info {
+      $_color-bg: rgba($blue-light, .15);
+
+      background-color: $_color-bg;
+    }
+
+    &.warning {
+      $_color-bg: rgba($neu-bright-orange, .54);
+
+      background-color: $_color-bg;
+      color: $neu-white-two;
+    }
+  }
+
+  .text {
+    flex-grow: 1;
+    padding-right: px-to-rem(20px);
+  }
+
+
+  .icon-notification-type {
+    @include circle(24px);
+    @include media-breakpoint-up (md) {
+      display: block;
+    }
+
+    display: none;
+    margin-right: px-to-rem(12px);
+  }
+}
+
+.close {
+  position: absolute;
+  top: px-to-rem(6px);
+  right: px-to-rem(6px);
+
+  &:hover {
+    opacity: .6;
+  }
+}

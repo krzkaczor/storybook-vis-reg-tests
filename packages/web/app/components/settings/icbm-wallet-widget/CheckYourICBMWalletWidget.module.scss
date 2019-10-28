@@ -1,0 +1,8 @@
+.button {
+  display: block;
+  margin: 0 auto;
+}
+
+.section {
+  @include section-container;
+}

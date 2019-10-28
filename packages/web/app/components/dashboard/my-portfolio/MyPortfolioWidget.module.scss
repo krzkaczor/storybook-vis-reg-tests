@@ -1,0 +1,8 @@
+.my-portfolio-widget {
+  @include media-breakpoint-up(sm) {
+    grid-template: auto / 2fr 1fr;
+  }
+
+  grid-gap: 2rem;
+  align-content: stretch;
+}

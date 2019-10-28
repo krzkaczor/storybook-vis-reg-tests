@@ -1,0 +1,20 @@
+$group-spacing: $spacing-vertical-lg-1;
+$document-spacing: $spacing-vertical-sm-1;
+
+.group {
+  margin-bottom: -$document-spacing;
+
+  &:not(:first-child) {
+    margin-top: $group-spacing;
+  }
+}
+
+.group-name {
+  @include font-label;
+
+  margin-bottom: $group-spacing;
+}
+
+.document {
+  margin-bottom: $spacing-vertical-sm-1;
+}

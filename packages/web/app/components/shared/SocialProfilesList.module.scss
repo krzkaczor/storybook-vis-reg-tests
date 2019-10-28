@@ -1,0 +1,87 @@
+.social-profiles-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &:global(.small) {
+    :local(.profile) {
+      @include rect(20px);
+
+      padding: 4px;
+      margin-right: 8px;
+
+      :local(.label) {
+        transform: translate(-50%, -30px);
+      }
+    }
+  }
+
+  &:global(.center) {
+    justify-content: center;
+  }
+}
+
+.profile {
+  @include circle(30px);
+
+  background-color: $neu-greyish-brown;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+  margin-right: 15px;
+  padding: px-to-rem(6px);
+  position: relative;
+  transition: 300ms $ease-out-expo background-color;
+
+  &:hover {
+    background-color: $neu-piss-yellow;
+
+    :local(.label) {
+      transform: translate(-50%, -50px);
+      opacity: 1;
+    }
+  }
+
+  .icon {
+    &,
+    &:hover {
+      color: $neu-white-two;
+    }
+  }
+}
+
+
+.label {
+  color: $neu-greyish-brown;
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  font-size: 14px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: all .5s cubic-bezier(.68, -.55, .265, 1.55);
+  left: 50%;
+  transform: translate(-50%, 0);
+  will-change: transform;
+
+  &,
+  .ornament {
+    box-shadow: $shadow-bottom-black-light;
+  }
+
+  .content {
+    background-color: $neu-white-two;
+    padding: 5px 7px;
+    z-index: $z-index-base;
+  }
+
+  .ornament {
+    @include rect(9px);
+
+    background-color: $neu-white-two;
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -5px) rotate(45deg);
+    z-index: $z-index-under-base;
+  }
+}

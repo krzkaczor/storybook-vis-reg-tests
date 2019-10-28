@@ -1,0 +1,21 @@
+.title {
+  font-family: $headings-font-family;
+  font-size: 1.75rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.explanation {
+  font-family: $headings-font-family;
+  font-size: .8125rem;
+  letter-spacing: -.00125rem;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.note {
+  @include font-button-small;
+  text-align: center;
+}

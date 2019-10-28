@@ -1,0 +1,106 @@
+$paragraph-color: #556877;
+
+%landing-header {
+  @include headline-big;
+
+  @include media-breakpoint-up(md) {
+    @include headline-huge;
+  }
+
+  color: $neu-charcoal-grey2;
+  font-weight: bold;
+}
+
+.landing {
+  background: $neu-white-two;
+
+  padding-top: px-to-rem(100px);
+  padding-bottom: px-to-rem(100px);
+}
+
+.neon {
+  background-color: $neu-neon-yellow;
+  height: 15px;
+  margin-bottom: 2rem;
+  width: 110px;
+}
+
+.header {
+  @extend %landing-header;
+}
+
+.description {
+  @include headline-bigger;
+
+  color: $paragraph-color;
+}
+
+.features-container {
+  grid-template-rows: 1fr;
+}
+
+.features {
+  @extend %landing-header;
+  @include font-headline;
+
+  @include media-breakpoint-up(lg) {
+    justify-self: right;
+  }
+
+  list-style: none;
+  padding-left: 0;
+
+  &-item {
+    padding: .8em 0;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1.4em;
+      width: 1.4em;
+      background-image: url("../../assets/img/tick.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding-left: 3.5em;
+      position: relative;
+      top: 5px;
+    }
+
+    &--invest {
+      &::before {
+        background-image: url("../../assets/img/landing/icon-eth-eur.svg");
+      }
+    }
+
+    &--min-ticket {
+      &::before {
+        background-image: url("../../assets/img/landing/icon-wallet.svg");
+      }
+    }
+
+    &--tradable {
+      &::before {
+        background-image: url("../../assets/img/landing/icon-world.svg");
+      }
+    }
+  }
+}
+
+.investment-opportunities {
+  padding-top: px-to-rem(50px);
+  padding-bottom: px-to-rem(100px);
+
+  &-header {
+    @extend %landing-header;
+
+    text-align: center;
+    margin-bottom: px-to-rem(60px);
+  }
+
+
+  &-call-to-action {
+    text-align: center;
+    padding-top: px-to-rem(120px);
+  }
+}
+

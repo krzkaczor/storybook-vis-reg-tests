@@ -1,0 +1,40 @@
+.responsive-video {
+  @include rect(100%);
+
+  position: absolute;
+  z-index: -1;
+
+  &.banner {
+    height: auto;
+    position: relative;
+  }
+
+  &:global {
+    &.dark {
+      background-color: $neu-silver;
+    }
+
+    &.light {
+      background-color: $neu-white-two;
+    }
+
+    &.transparent {
+      background-color: transparent;
+    }
+
+    &.black {
+      background-color: $black;
+    }
+
+    &.thumbnail {
+      cursor: pointer;
+    }
+  }
+}
+
+.video {
+  @include rect(100%);
+
+  display: block;
+  font-style: italic;
+}

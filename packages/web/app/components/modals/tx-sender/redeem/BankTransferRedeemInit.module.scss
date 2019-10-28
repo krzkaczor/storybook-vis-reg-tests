@@ -1,0 +1,31 @@
+.container {
+  :global(.row) {
+    margin: .5rem 0;
+  }
+
+  :global(.col) {
+    padding: 0;
+    align-self: center;
+  }
+}
+
+.link-button {
+  color: $neu-blue;
+  text-align: right;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.label {
+  @include font-label;
+
+  position: relative;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}

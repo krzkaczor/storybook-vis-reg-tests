@@ -1,0 +1,35 @@
+.action-required {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    display: none;
+    height: px-to-rem(8px);
+    width: px-to-rem(8px);
+    background-color: $neu-bright-orange;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  &--active {
+    &::before {
+      display: inline-block;
+    }
+  }
+
+  &.position-top {
+    &::before {
+      top: px-to-rem(-1px);
+      right: px-to-rem(-2px);
+    }
+  }
+
+  &.position-bottom {
+    &::before {
+      bottom: px-to-rem(-1px);
+      right: px-to-rem(-2px);
+    }
+  }
+
+}

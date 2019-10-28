@@ -1,0 +1,16 @@
+.account-balance {
+  display: flex;
+  justify-content: space-between;
+  min-height: px-to-rem(50px);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-transform: uppercase;
+
+  .button {
+    justify-content: flex-end;
+  }
+}

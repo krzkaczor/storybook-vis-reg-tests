@@ -1,0 +1,32 @@
+@mixin button-text {
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: $neu-black;
+}
+
+@mixin button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.advanced {
+  @include button-text;
+  @include button;
+  margin-top: map-get($spacers, 3);
+  text-align: center;
+}
+
+.back {
+  @include button-text;
+  @include button;
+  font-size: px-to-rem(15px);
+}
+
+.explanation {
+  width: 100%;
+  text-align: center;
+  line-height: 150%;
+  margin: px-to-rem(40px) 0 px-to-rem(20px);
+}

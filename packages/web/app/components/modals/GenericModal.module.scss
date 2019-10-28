@@ -1,0 +1,9 @@
+.icon {
+  height: px-to-rem(16px);
+  width: px-to-rem(16px);
+}
+
+.content {
+  @include make-col-ready;
+  text-align: center;
+}

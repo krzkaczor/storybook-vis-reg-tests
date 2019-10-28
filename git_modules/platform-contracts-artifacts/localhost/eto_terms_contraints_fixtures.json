@@ -1,0 +1,128 @@
+{
+  "0x6b52709DcCD6fE0753bC2fcdf86f320dD818bceD": {
+    "NAME": "hnwi eto de vma",
+    "CAN_SET_TRANSFERABILITY": false,
+    "HAS_NOMINEE": true,
+    "MIN_TICKET_SIZE_EUR_ULPS": "200000000000000000000000",
+    "MAX_TICKET_SIZE_EUR_ULPS": "0",
+    "MIN_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "MAX_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "OFFERING_DOCUMENT_TYPE": "0",
+    "OFFERING_DOCUMENT_SUB_TYPE": "0",
+    "JURISDICTION": "DE",
+    "ASSET_TYPE": "1",
+    "TOKEN_OFFERING_OPERATOR": "0x798fD195575d195B9Bb9619ffb905E434f044f1D",
+    "_deploymentMetadata": {
+      "step": 1,
+      "available": true
+    }
+  },
+  "0x2ce1a09bFe331347BC81463f96F288b08f8869f8": {
+    "NAME": "hnwi eto li security",
+    "CAN_SET_TRANSFERABILITY": true,
+    "HAS_NOMINEE": true,
+    "MIN_TICKET_SIZE_EUR_ULPS": "100000000000000000000000",
+    "MAX_TICKET_SIZE_EUR_ULPS": "0",
+    "MIN_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "MAX_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "OFFERING_DOCUMENT_TYPE": "0",
+    "OFFERING_DOCUMENT_SUB_TYPE": "0",
+    "JURISDICTION": "LI",
+    "ASSET_TYPE": "0",
+    "TOKEN_OFFERING_OPERATOR": "0xC35ef5DA2607C70D812cA2F317E9958910450dF1",
+    "_deploymentMetadata": {
+      "step": 1,
+      "available": true
+    }
+  },
+  "0xC8fC26967Db8b6D1784c8e80f35de96f366FA7d4": {
+    "NAME": "mini eto li",
+    "CAN_SET_TRANSFERABILITY": true,
+    "HAS_NOMINEE": true,
+    "MIN_TICKET_SIZE_EUR_ULPS": "10000000000000000000",
+    "MAX_TICKET_SIZE_EUR_ULPS": "0",
+    "MIN_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "MAX_INVESTMENT_AMOUNT_EUR_ULPS": "5000000000000000000000000",
+    "OFFERING_DOCUMENT_TYPE": "0",
+    "OFFERING_DOCUMENT_SUB_TYPE": "0",
+    "JURISDICTION": "LI",
+    "ASSET_TYPE": "0",
+    "TOKEN_OFFERING_OPERATOR": "0xC35ef5DA2607C70D812cA2F317E9958910450dF1",
+    "_deploymentMetadata": {
+      "step": 1,
+      "available": true
+    }
+  },
+  "0x20C8E3a3f8CB4FD61b44C91F42d73Ef4275A30E8": {
+    "NAME": "retail eto li security",
+    "CAN_SET_TRANSFERABILITY": true,
+    "HAS_NOMINEE": true,
+    "MIN_TICKET_SIZE_EUR_ULPS": "10000000000000000000",
+    "MAX_TICKET_SIZE_EUR_ULPS": "0",
+    "MIN_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "MAX_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "OFFERING_DOCUMENT_TYPE": "1",
+    "OFFERING_DOCUMENT_SUB_TYPE": "0",
+    "JURISDICTION": "DE",
+    "ASSET_TYPE": "0",
+    "TOKEN_OFFERING_OPERATOR": "0xC35ef5DA2607C70D812cA2F317E9958910450dF1",
+    "_deploymentMetadata": {
+      "step": 1,
+      "available": true
+    }
+  },
+  "0x79Fcd0511561968D59c1d0Fe4E200d43B219dA45": {
+    "NAME": "retail eto li vma",
+    "CAN_SET_TRANSFERABILITY": false,
+    "HAS_NOMINEE": true,
+    "MIN_TICKET_SIZE_EUR_ULPS": "10000000000000000000",
+    "MAX_TICKET_SIZE_EUR_ULPS": "0",
+    "MIN_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "MAX_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "OFFERING_DOCUMENT_TYPE": "1",
+    "OFFERING_DOCUMENT_SUB_TYPE": "0",
+    "JURISDICTION": "LI",
+    "ASSET_TYPE": "1",
+    "TOKEN_OFFERING_OPERATOR": "0xC35ef5DA2607C70D812cA2F317E9958910450dF1",
+    "_deploymentMetadata": {
+      "step": 1,
+      "available": true
+    }
+  },
+  "0xF964Ed64FC83F22cFEf479dEA19cDCCdc6d36D2a": {
+    "NAME": "retail eto de vma",
+    "CAN_SET_TRANSFERABILITY": false,
+    "HAS_NOMINEE": true,
+    "MIN_TICKET_SIZE_EUR_ULPS": "10000000000000000000",
+    "MAX_TICKET_SIZE_EUR_ULPS": "0",
+    "MIN_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "MAX_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "OFFERING_DOCUMENT_TYPE": "1",
+    "OFFERING_DOCUMENT_SUB_TYPE": "0",
+    "JURISDICTION": "DE",
+    "ASSET_TYPE": "1",
+    "TOKEN_OFFERING_OPERATOR": "0x798fD195575d195B9Bb9619ffb905E434f044f1D",
+    "_deploymentMetadata": {
+      "step": 1,
+      "available": true
+    }
+  },
+  "0xD20bd631bbcCD0Fc7DF233F224e7B51686A9f427": {
+    "NAME": "hnwi eto de security",
+    "CAN_SET_TRANSFERABILITY": true,
+    "HAS_NOMINEE": true,
+    "MIN_TICKET_SIZE_EUR_ULPS": "100000000000000000000000",
+    "MAX_TICKET_SIZE_EUR_ULPS": "0",
+    "MIN_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "MAX_INVESTMENT_AMOUNT_EUR_ULPS": "0",
+    "OFFERING_DOCUMENT_TYPE": "0",
+    "OFFERING_DOCUMENT_SUB_TYPE": "0",
+    "JURISDICTION": "DE",
+    "ASSET_TYPE": "0",
+    "TOKEN_OFFERING_OPERATOR": "0x798fD195575d195B9Bb9619ffb905E434f044f1D",
+    "_deploymentMetadata": {
+      "step": 1,
+      "available": false
+    }
+  }
+}

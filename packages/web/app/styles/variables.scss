@@ -1,0 +1,76 @@
+//
+// @deprecated Migrate variables to components or variables folder
+//
+
+
+@import "./variables/index";
+
+$header-height-sm: 64px;
+$header-height-md: 64px;
+$header-height-lg: 80px;
+
+$layout-content-padding-sm: px-to-rem(15px);
+$layout-content-padding-md: px-to-rem(20px);
+$layout-content-padding-lg: px-to-rem(32px);
+
+$header-height: 60px;
+$footer-dots-height: 360px;
+
+$extra-bigger-font-size: px-to-rem(23px);
+$bigger-font-size: px-to-rem(16px);
+$smaller-font-size: px-to-rem(13px);
+
+$neu-font-size-lg: px-to-rem(20px);
+
+$shadow: 0 px-to-rem(2px) px-to-rem(4px) 0 rgba(0, 0, 0, .1);
+$shadow-white: 0 px-to-rem(2px) px-to-rem(4px) 0 rgba(255, 255, 255, .1);
+$shadow1: 0 3px 1px 0 rgba(0, 0, 0, .1), 0 1px 1px 0 rgba(0, 0, 0, .16), 0 3px 8px 0 rgba(0, 0, 0, .15);
+
+// Bootstrap variable overrides
+//colors
+$body-color: $neu-slate-grey;
+$body-bg: transparent;
+$dark: $neu-charcoal-grey;
+
+// fonts
+$font-family-base: "Lato", sans-serif;
+$font-family-roboto: Roboto, sans-serif;
+$font-size-base: .875rem;
+$font-size-medium-small: px-to-rem(14px);
+$font-weight-bold: 600;
+$headings-font-family: "Lato", sans-serif;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+$headings-color: $neu-black;
+
+$link-color: $neu-black;
+$link-hover-color: $neu-black;
+
+// buttons and forms
+$input-btn-border-width: 2px;
+
+// buttons
+$btn-font-weight: $font-weight-bold;
+$btn-disabled-opacity: 1;
+$btn-focus-width: 0;
+$btn-focus-box-shadow: none;
+
+// forms
+$enable-rounded: false;
+$enable-shadows: false;
+
+$input-border-width: 1px;
+$input-border-color: $gray4;
+$input-focus-border-color: $gray4;
+$input-color: $neu-charcoal-grey;
+$input-placeholder-color: $gray5;
+$input-padding-x: 0;
+$input-padding-y: 3px;
+$input-focus-width: 0;
+$input-focus-box-shadow: none;
+$form-feedback-font-size: px-to-rem(14px);
+$form-feedback-invalid-color: $neu-bright-orange;
+
+// panel
+$narrow-padding: px-to-rem(10px);
+$padding: px-to-rem(25px);

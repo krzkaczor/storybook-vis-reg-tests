@@ -1,0 +1,38 @@
+.percentage-indicator-bar {
+  align-items: center;
+  color: $green2;
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+
+  &:global(.green) {
+    color: $neu-seaweed;
+
+    .label {
+      color: darken($neu-seaweed, 30%);
+    }
+  }
+
+  .label {
+    @include font-default;
+
+    position: absolute;
+    left: px-to-rem(20px);
+    color: $green3;
+    font-weight: $font-weight-bold;
+  }
+
+  .progress {
+    fill: currentColor;
+    transition: 500ms ease-in-out transform;
+
+    &--green {
+      color: $neu-seaweed;
+    }
+  }
+
+  .background {
+    width: 100%;
+    fill: $gray9;
+  }
+}

@@ -1,0 +1,29 @@
+.jurisdiction-banner {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: -2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    @include font-default;
+    margin-bottom: -2rem;
+  }
+  @include font-thin;
+
+  margin-bottom: -1rem;
+  height: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+  padding: 1rem;
+  background-color: $neu-white-two;
+
+  font-weight: 400;
+
+  .icon {
+    height: px-to-rem(16px);
+    width: px-to-rem(16px);
+    margin-right: px-to-rem(10px);
+  }
+}

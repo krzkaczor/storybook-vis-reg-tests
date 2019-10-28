@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: $neu-pale-grey;
+
+  img {
+    opacity: .1;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: block;
+  color: $body-color;
+  width: 100%;
+  cursor: pointer;
+
+  img {
+    opacity: 1;
+  }
+
+}
+
+.input {
+  position: absolute;
+  visibility: hidden;
+
+  &:disabled + .box {
+    color: $neu-silver;
+    cursor: default;
+
+    .label {
+      padding: px-to-rem(5px) 1.25rem;
+    }
+
+    .icon {
+      opacity: .3;
+    }
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  border: 1px solid $neu-pale-grey;
+  height: 52px;
+}
+
+.label {
+  padding: .75rem 1.25rem;
+  text-align: right;
+}
+
+.balance {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: 1.2em;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.icon {
+  margin-left: .5em;
+  height: 2.4em;
+}
+
+.balance-values {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+
+  .balance-eur {
+    font-size: .8em;
+    color: $neu-pale-grey;
+  }
+}
+
+.checked {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: .5em solid $neu-seaweed;
+
+  .balance {
+    margin-right: .7em;
+  }
+}
+
+.enable-icbm {
+  @include font-label;
+}

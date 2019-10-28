@@ -1,0 +1,119 @@
+.token-terms {
+  .content {
+    @include media-breakpoint-up (md) {
+      flex-direction: row;
+    }
+
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .divider {
+    @include media-breakpoint-up (md) {
+      display: block;
+    }
+
+    display: none;
+    position: relative;
+    width: px-to-rem(50px);
+
+    &::before {
+      @include rect(1px, 100%);
+
+      background-color: $neu-pale-grey;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .group {
+    @include media-breakpoint-up (md) {
+      width: calc(#{(1 / 3) * 100%} - 50px);
+      flex-direction: row;
+
+      &:last-of-type {
+        width: (100 / 3) * 1%;
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .group-title {
+    @include media-breakpoint-up (md) {
+      writing-mode: vertical-lr;
+      margin-right: px-to-rem(25px);
+      margin-top: 0;
+      margin-bottom: 0;
+      transform: rotate(180deg);
+      width: 1.5rem;
+    }
+
+    text-transform: uppercase;
+    transform: rotate(0);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .group-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .group-document-link {
+    color: $neu-greyish-brown;
+    font-size: 12px;
+
+    .icon {
+      margin-right: 12px;
+      width: 18px;
+      line-height: 0;
+    }
+  }
+
+  .label {
+    text-transform: uppercase;
+    flex-basis: 70%;
+  }
+}
+
+.group {
+  flex-shrink: 0;
+  width: 100%;
+
+  .entry {
+    @include media-breakpoint-up (xl) {
+      flex-direction: row;
+    }
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    .label,
+    .value {
+      flex-basis: 60%;
+      overflow-wrap: break-word;
+    }
+
+    .label {
+      text-transform: uppercase;
+    }
+
+    .value {
+      @include media-breakpoint-up (xl) {
+        flex-basis: 40%;
+        padding-left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.tabs-wrapper {
+  overflow: hidden;
+  height: 1.9em;
+}
+
+.tabs-overflow-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+
+  &:global(.center) {
+    justify-content: center;
+  }
+
+  &:global(.right) {
+    justify-content: flex-end;
+  }
+}
+
+.tab {
+  $_space-between-tabs-layout-small: 10px;
+  $_space-between-tabs-layout-large: 60px;
+
+  border-bottom: 2px solid transparent;
+  color: $color-black;
+  cursor: pointer;
+  display: inline-block;
+  flex-shrink: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+
+  // state: active
+  &:global(.is-active),
+  &:hover,
+  &:focus {
+    border-bottom-color: $neu-piss-yellow;
+  }
+
+  // state: with ornament
+  &:global(.has-ornament) {
+    position: relative;
+
+    &:not(:last-of-type) {
+      &::after {
+        @include rect(1px, 100%);
+
+        background-color: $neu-silver;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    &:global(.small) {
+      &::after {
+        right: -$_space-between-tabs-layout-small;
+      }
+    }
+
+    &:global(.large) {
+      &::after {
+        @include responsive-size(right, -$_space-between-tabs-layout-small, -$_space-between-tabs-layout-large);
+      }
+    }
+  }
+
+  //layout: size small
+  &:global(.small) {
+    @include font-tab;
+
+    margin-left: $_space-between-tabs-layout-small;
+    margin-right: $_space-between-tabs-layout-small;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  //layout: size large
+  &:global(.large) {
+    $_padding-large: 20px;
+    $_padding-small: 5px;
+
+    @include font-button-default;
+    @include responsive-size(padding-right, $_padding-small, $_padding-large);
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    + :local(.tab) {
+      @include responsive-size(margin-left, $_space-between-tabs-layout-small - $_padding-small, $_space-between-tabs-layout-large - $_padding-large);
+    }
+  }
+}

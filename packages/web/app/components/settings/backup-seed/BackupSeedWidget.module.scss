@@ -1,0 +1,12 @@
+.icon {
+  height: px-to-rem(16px);
+  width: px-to-rem(16px);
+}
+
+.text {
+  min-height: px-to-rem(108px);
+}
+
+.section {
+  @include section-container;
+}

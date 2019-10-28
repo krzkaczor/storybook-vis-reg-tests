@@ -1,0 +1,53 @@
+$component-height: px-to-rem(120px);
+
+.single-file-upload {
+  display: flex;
+}
+
+.dropzone {
+  display: flex;
+  height: $component-height;
+  align-items: center;
+
+  &:global(.reject) {
+    .fake-dropzone-area {
+      color: $neu-red;
+    }
+  }
+
+  &:global(.disabled) {
+    .fake-dropzone-area {
+      opacity: .6;
+    }
+  }
+
+  :global(.c-uploaded-files) {
+    margin-left: px-to-rem(20px);
+  }
+}
+
+.fake-dropzone-area {
+  @include font-tab;
+
+  border: px-to-rem(2px) dashed $neu-silver;
+  color: $neu-slate-grey;
+  cursor: pointer;
+  display: flex;
+  font-weight: $font-weight-bold;
+  justify-content: center;
+  align-items: center;
+  height: $component-height;
+  padding: px-to-rem(12px);
+  width: px-to-rem(120px);
+  flex-shrink: 0;
+
+  img {
+    max-height: 90%;
+    max-width: 90%;
+  }
+}
+
+.accepted-files {
+  color: $neu-slate-grey;
+  margin-left: px-to-rem(20px);
+}

@@ -1,0 +1,64 @@
+.my-account-button {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    grid-area: my-account;
+  }
+
+  position: relative;
+  display: none;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+
+  .name {
+    @include media-breakpoint-up(lg) {
+      display: inline;
+    }
+
+    display: none;
+    font-family: $font-family-roboto;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    line-height: 1.71;
+    margin-left: .5rem;
+  }
+}
+
+.menu {
+  @include media-breakpoint-up (lg) {
+    top: calc(#{$header-height-lg} - 10px);
+  }
+
+  position: absolute;
+  top: calc(#{$header-height-sm} - 10px);
+  right: 0;
+
+  min-width: px-to-rem(200px);
+  z-index: 3;
+}
+
+.menu-inner {
+  $shadow: rgba(20, 36, 49, .1);
+
+  display: flex;
+  flex-flow: column;
+  padding-top: px-to-rem(8px);
+  padding-bottom: px-to-rem(8px);
+  background-color: $neu-white-two;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px 0 $shadow, 0 -2px 20px 0 $shadow;
+}
+
+.arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $neu-white-two;
+  margin-right: 1rem;
+  margin-left: auto;
+
+}

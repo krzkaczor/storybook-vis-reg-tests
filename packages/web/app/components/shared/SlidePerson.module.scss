@@ -1,0 +1,52 @@
+.slide-person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:global(.vertical) {
+    flex-direction: column;
+
+    > * {
+      margin: 0 auto 10px;
+    }
+
+    :local(.name) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &:global(.horizontal) {
+    flex-direction: row;
+
+    :local(.bio) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.profile {
+  text-align: center;
+  max-width: 120px;
+}
+
+.image {
+  @include circle(83px);
+
+  margin: 0 auto 10px;
+}
+
+.name {
+  font-size: 12px;
+  letter-spacing: -.2px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.bio {
+  font-size: px-to-rem(12px);
+  max-width: 50%;
+}

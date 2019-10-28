@@ -1,0 +1,45 @@
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.tx-status-label {
+  border-radius: 4px;
+  padding: .3em .4em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &--pending {
+    color: $neu-charcoal-grey;
+    background-color: transparentize($neu-charcoal-grey, .9);
+  }
+
+  &--error {
+    color: $neu-bright-orange;
+    background-color: transparentize($neu-bright-orange, .9);
+  }
+
+  &--success {
+    color: $neu-bitter-lemon;
+    background-color: transparentize($neu-bitter-lemon, .9);
+  }
+
+  .icon {
+    @include rect(16px);
+
+    margin-left: 8px;
+    vertical-align: text-top;
+
+    &--pending {
+      animation: rotation 1s linear 0s infinite;
+    }
+  }
+}
+
+ 

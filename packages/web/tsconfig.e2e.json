@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "target": "es2017",
+    "types": ["cypress", "node"]
+  },
+  "include": [
+    "../../node_modules/types-bn/index.d.ts",
+    "../../node_modules/types-ethereumjs-util/index.d.ts",
+    "../../node_modules/web3-typescript-typings/index.d.ts",
+    "../../node_modules/web3-eth-abi/node_modules/web3-utils",
+    "./@types/**/*.d.ts",
+    "./typings/**/*.d.ts",
+    "./app/test-e2e/**/*.spec.e2e.ts",
+    "./app/test-e2e/**/*.spec.e2e.io.ts"
+  ],
+  "exclude": []
+}

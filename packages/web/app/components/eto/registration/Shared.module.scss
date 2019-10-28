@@ -1,0 +1,24 @@
+.section {
+  max-width: 730px;
+  width: 100%;
+}
+
+.button-section {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+.form-subtitle {
+  @include font-headline-medium;
+  margin: 4rem 0 2rem;
+}
+
+.radio-button-group {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: .5rem;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

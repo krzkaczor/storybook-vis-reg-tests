@@ -1,0 +1,30 @@
+.step-card-wrapper {
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+  grid-gap: 1.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items:  start;
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
+}
+
+.wallet-logos {
+  img {
+    height: px-to-rem(48px);
+  }
+}
+
+.title {
+  font-family: $headings-font-family;
+  font-size: 1.75rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .step-card-wrapper {
+    margin: 0 10% 1.5rem;
+  }
+}

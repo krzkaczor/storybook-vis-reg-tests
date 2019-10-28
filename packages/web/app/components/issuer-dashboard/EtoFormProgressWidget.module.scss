@@ -1,0 +1,25 @@
+.content-wrapper {
+  @include rect(100%);
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link-wrapper {
+  margin-top: $spacing-vertical-lg-1;
+  color: $neu-greyish-brown;
+  font-size: px-to-rem(16px);
+  font-weight: $font-weight-light;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@include media-breakpoint-between(sm, lg) {
+  .progress-section {
+    grid-column: span 1;
+  }
+}

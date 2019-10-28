@@ -1,0 +1,26 @@
+.section {
+  display: grid;
+  grid-template: auto auto auto / auto 1fr;
+  grid-gap: 2rem 1rem;
+  justify-items: flex-start;
+}
+
+.change-email-form {
+  display: grid;
+  grid-template: auto / 1fr;
+  grid-gap: 2rem 1rem;
+}
+
+.text {
+  grid-column: 1 / -1;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.button-wrapper {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template: auto / 1fr auto;
+  grid-gap: 1rem;
+  justify-items: flex-end;
+}

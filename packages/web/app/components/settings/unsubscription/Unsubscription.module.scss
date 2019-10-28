@@ -1,0 +1,19 @@
+.container {
+  margin-top: px-to-rem(72px);
+  text-align: center;
+
+  .description {
+    @include font-headline;
+
+    color: $neu-shuttle-gray;
+    max-width: 640px;
+    margin: px-to-rem(24px) auto;
+  }
+
+  .header {
+    @include headline-big;
+
+    color: $neu-charcoal-grey;
+    font-weight: 600;
+  }
+}

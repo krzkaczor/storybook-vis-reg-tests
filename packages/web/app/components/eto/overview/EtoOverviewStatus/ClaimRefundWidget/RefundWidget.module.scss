@@ -1,0 +1,8 @@
+.message {
+  @include font-headline-small;
+
+  color: $neu-greyish-brown;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}

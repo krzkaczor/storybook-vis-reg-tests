@@ -1,0 +1,48 @@
+.money-suite-widget {
+  display: flex;
+  align-items: center;
+
+  &.framed {
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid $neu-pale-grey;
+    padding: px-to-rem(16px) px-to-rem(12px);
+  }
+
+  &.huge {
+    .icon {
+      @include rect(43px);
+    }
+  }
+
+  &.large {
+    .icon {
+      @include rect(40px);
+    }
+  }
+
+  &.medium {
+    .icon {
+      @include rect(36px);
+    }
+  }
+
+
+  &.position-left {
+    .icon {
+      margin-right: px-to-rem(10px);
+    }
+  }
+
+  &.position-right {
+    text-align: right;
+
+    .icon {
+      margin-left: px-to-rem(10px);
+    }
+  }
+
+  .icon {
+    @include rect(34px);
+  }
+}

@@ -1,0 +1,14 @@
+.value-wrapper {
+  color: $neu-charcoal-grey;
+  font-size: $neu-font-size-lg;
+
+  & > span {
+    padding: 0 px-to-rem(10px) px-to-rem(4px);
+  }
+}
+
+.error {
+  @include font-default;
+
+  border-top: 1px solid $neu-bright-orange;
+}

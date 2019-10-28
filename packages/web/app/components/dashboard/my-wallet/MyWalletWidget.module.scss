@@ -1,0 +1,72 @@
+.background {
+  background-color: $neu-white-two;
+}
+
+.icon {
+  width: px-to-rem(28px);
+  height: px-to-rem(28px);
+}
+
+:global(.button) > div {
+  &.link {
+    font-size: px-to-rem(14px);
+    font-weight: $font-weight-bold;
+    padding: 0;
+  }
+}
+
+.small-font {
+  font-size: px-to-rem(12px);
+  font-weight: $font-weight-bold;
+  padding-top: px-to-rem(1px);
+  margin-right: px-to-rem(10px);
+}
+
+.total {
+  @include font-headline;
+  display: flex;
+  align-content: center;
+  color: $neu-seaweed;
+}
+
+.money-suite-wrapper {
+  $_border-color: rgba($neu-slate-grey, .1);
+  padding-bottom: px-to-rem(15px);
+  padding-top: px-to-rem(15px);
+  border-bottom: 1px solid $_border-color;
+}
+
+@include media-breakpoint-up (lg) {
+  .border {
+    border-bottom: solid px-to-rem(1px);
+    border-bottom-color: $neu-silver;
+  }
+}
+
+@include media-breakpoint-down (xs) {
+  .border {
+    border-bottom: solid px-to-rem(1px);
+    border-bottom-color: $neu-silver;
+  }
+}
+
+@include media-breakpoint-down (md) {
+  @include media-breakpoint-up (sm) {
+    .border-s {
+      border-bottom: solid px-to-rem(1px);
+      border-bottom-color: $neu-silver;
+    }
+
+    .border-left {
+      border-left: solid px-to-rem(1px);
+      border-left-color: $neu-silver;
+    }
+  }
+}
+
+.icbm-wallet {
+  @include font-tab;
+
+  margin-bottom: 0;
+  text-align: right;
+}

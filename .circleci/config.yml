@@ -1,0 +1,205 @@
+version: 2.1
+
+executors:
+  docker:
+    docker:
+      - image: circleci/node:11.14.0
+    working_directory: /home/circleci/app
+
+  docker-browsers:
+    docker:
+      - image: circleci/node:11.14.0-browsers
+    working_directory: /home/circleci/app
+
+
+jobs:
+  install-lint-test:
+    # install and lint is taken as one job to remove required time for downloading cache
+    executor: docker
+
+    steps:
+      # Download and cache dependencies
+      - checkout
+      # Installation
+      - run: yarn --frozen-lockfile
+      # Confirm Artifact Version
+      - run: yarn workspace @neufund/web contract-artifacts:check
+      # Linting
+      - run: yarn workspace @neufund/web lint
+      - run: yarn workspace @neufund/shared lint
+      # Unit Tests
+      - run: yarn workspace @neufund/web test
+      - run: yarn workspace @neufund/shared test
+
+      - save_cache:
+          paths:
+            - node_modules
+            - packages/web/app/lib/contracts
+            - /home/circleci/.cache/Cypress
+          key: v22-deps-{{ checksum "package.json" }}
+
+  build-docker-test-e2e:
+    executor: docker-browsers
+
+    parallelism: 4
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v22-deps-{{ checksum "package.json" }}
+            - v22-deps-
+
+      - run: yarn --frozen-lockfile
+      - run:
+          command: yarn workspace @neufund/web build:prod:e2e:io
+          no_output_timeout: 10m
+      - run:
+          command: yarn workspace @neufund/web test:e2e:chrome
+
+  build-frontend:
+    executor: docker
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v22-deps-{{ checksum "package.json" }}
+            - v22-deps-
+
+      - run: yarn --frozen-lockfile
+      - run:
+          command: yarn workspace @neufund/web build:prod:e2e
+          no_output_timeout: 10m
+      # If build takes more than 10mins then fail
+      - persist_to_workspace:
+          root: /home/circleci/app
+          paths:
+            - ./
+
+  test-e2e:
+    machine:
+      enabled: true
+      image: ubuntu-1604:201903-01
+      docker_layer_caching: true
+
+    environment:
+      COMPOSE_INTERACTIVE_NO_CLI: 1
+
+    parallelism: 4
+
+    working_directory: /home/circleci/app
+
+    steps:
+      - attach_workspace:
+          at: /home/circleci/app
+      - checkout
+      - run: ./.circleci/install-yarn.sh
+      - restore_cache:
+          keys:
+            - v22-deps-{{ checksum "package.json" }}
+            - v22-deps-
+
+      - run:
+          command: source /opt/circleci/.nvm/nvm.sh && yarn workspace @neufund/web test:e2e
+          no_output_timeout: 30m
+
+  codechecks:
+    executor: docker
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v22-deps-{{ checksum "package.json" }}
+            - v22-deps-
+
+      - run: yarn --frozen-lockfile
+      - run: yarn workspace @neufund/web build:commit-deployment
+      - run: yarn workspace @neufund/web codechecks
+
+  codechecks-vis-reg:
+    executor: docker-browsers
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v22-deps-{{ checksum "package.json" }}
+            - v22-deps-
+
+      - run: yarn --frozen-lockfile
+      - run: yarn workspace @neufund/web storybook:screenshots
+      - run: yarn workspace @neufund/web codechecks ./codechecks-vis-reg.ts
+
+  deploy-storybook:
+    executor: docker
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v22-deps-{{ checksum "package.json" }}
+            - v22-deps-
+
+      - run: yarn --frozen-lockfile
+      - run: yarn workspace @neufund/web deploy-storybook --ci --host-token-env-variable=DANGER_GITHUB_API_TOKEN
+
+workflows:
+  version: 2
+
+  mainflow:
+    jobs:
+      - install-lint-test
+      - build-docker-test-e2e:
+          requires:
+            - install-lint-test
+      - build-frontend:
+          requires:
+            - install-lint-test
+      - test-e2e:
+          requires:
+            - build-frontend
+            - build-docker-test-e2e
+      - codechecks:
+          requires:
+            - build-frontend
+            - build-docker-test-e2e
+      - codechecks-vis-reg:
+          requires:
+            - build-frontend
+
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 5 * * *"
+          filters:
+            branches:
+              only:
+                - master
+                - production
+    jobs:
+      - install-lint-test
+      - build-docker-test-e2e:
+          requires:
+            - install-lint-test
+      - build-frontend:
+          requires:
+            - install-lint-test
+      - test-e2e:
+          requires:
+            - build-frontend
+            - build-docker-test-e2e
+      - codechecks:
+          requires:
+            - build-frontend
+      - codechecks-vis-reg:
+          requires:
+            - build-frontend
+
+  deploy-storybook:
+    jobs:
+      - deploy-storybook:
+          filters:
+            branches:
+              only: master

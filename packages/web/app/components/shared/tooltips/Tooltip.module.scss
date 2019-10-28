@@ -1,0 +1,39 @@
+$icon-size: 18px;
+
+.tooltip-wrapper {
+  @include media-breakpoint-down (sm) {
+    display: block;
+    margin-left: 0;
+  }
+
+  display: inline-block;
+
+  position: relative;
+  vertical-align: text-bottom;
+
+  &--icon {
+    margin-left: px-to-rem(10px);
+
+    .tooltip {
+      @include media-breakpoint-down (sm) {
+        display: none;
+      }
+
+      :global(.inline-icon) {
+        height: px-to-rem($icon-size);
+        width: px-to-rem($icon-size);
+      }
+    }
+  }
+
+  &--text {
+    .tooltip {
+      display: inline-block;
+      border-bottom: 1px dotted $neu-greyish-brown;
+    }
+  }
+}
+
+.tooltip {
+  cursor: help;
+}

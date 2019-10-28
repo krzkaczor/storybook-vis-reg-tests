@@ -1,0 +1,38 @@
+$cover-padding: px-to-rem(8px);
+
+.cover {
+  position: relative;
+
+  .jurisdiction {
+    @include font-label;
+
+    background: $neu-white-two;
+    opacity: .7;
+    position: absolute;
+    width: auto;
+
+    right: 0;
+    text-align: right;
+    top: 5%;
+    padding: .6em;
+  }
+
+  .tags {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding: 0 $cover-padding;
+  }
+
+  .tag {
+    margin-left: $cover-padding;
+    margin-bottom: $cover-padding;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}

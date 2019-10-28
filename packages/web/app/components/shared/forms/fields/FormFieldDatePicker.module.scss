@@ -1,0 +1,193 @@
+// sass-lint:disable-all
+
+$_border-color: #e9eff4;
+$_background-color: #f4f7f9;
+$_font-color: #323c47;
+
+.form-field-date-picker {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+  padding: 0;
+  border: 1px solid $_border-color;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &,
+  &.is-valid {
+    &,
+    &:focus {
+      border-color: $_border-color;
+    }
+  }
+
+  :global {
+    .form-group {
+      flex: 1;
+    }
+
+    .form-control {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 0 14px;
+      margin: 0;
+      border: none;
+
+      font-size: 14px;
+      font-weight: normal;
+
+      &,
+      &.is-valid {
+        &,
+        &:focus {
+          border-color: $_border-color;
+        }
+      }
+    }
+
+    .rdtMilli {
+      input {
+        font-size: 12px;
+      }
+    }
+
+    .rdtPicker {
+      width: 230px;
+      border: 1px solid #dfe4ef;
+
+      td.rdtActive {
+        &,
+        &:hover {
+          background-color: $color-green;
+          text-shadow: none;
+        }
+      }
+
+      th {
+        :global(.rdtPrev) {
+          font-size: 12px;
+        }
+      }
+
+      table {
+        border-spacing: 6px 10px;
+        border-collapse: separate;
+      }
+    }
+
+    .rdt {
+      width: 100%;
+
+      td {
+        border-spacing: 6px;
+      }
+    }
+
+    .rdtPicker {
+      th {
+        border-bottom: 1px solid #f9f9f9;
+      }
+
+      td.rdtOld,
+      td.rdtNew {
+        color: #bac2c7;
+        background-color: #edf2f5;
+      }
+
+      td.rdtToday {
+        &::before {
+          border-bottom: 7px solid $color-green;
+          border-top-color: transparent;
+        }
+      }
+    }
+
+    .rdtDays {
+      border-radius: 50%;
+      padding: 0 6px;
+
+      tbody {
+        padding: 0 10px;
+      }
+    }
+
+    tbody {
+      :global(.rdtDay) {
+        height: 22px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+//
+//.input-wrapper {
+//  display: flex;
+//
+//  input {
+//    &:focus {
+//      border-color: $_border-color;
+//    }
+//  }
+//}
+
+.icon {
+  @include rect(49px);
+
+  align-items: center;
+  background-color: $_background-color;
+  border: 1px solid $_border-color;
+  color: $neu-piss-yellow;
+  border-left: 0;
+  display: flex;
+  justify-content: center;
+  transition: border-color .15s ease-in-out;
+
+  :global(.inline-icon) {
+    @include rect(22px);
+  }
+}
+
+.chosen-date {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 5px 14px;
+  margin: 0;
+  border: none;
+
+  font-size: 14px;
+  font-weight: normal;
+
+  &,
+  &.is-valid {
+    &,
+    &:focus {
+      border-color: $_border-color;
+    }
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .form-field-date-picker {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1170px) {
+  .chosen-date {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 14px;
+  }
+}

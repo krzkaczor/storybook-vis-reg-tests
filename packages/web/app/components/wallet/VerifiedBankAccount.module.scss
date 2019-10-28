@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  @include font-label;
+  @include responsive-size(margin-top, $spacing-vertical-sm-1, $spacing-vertical-lg-1);
+
+  text-transform: none;
+}
+
+.framed {
+  font-weight: bold;
+}
+
+.link-button {
+  color: $neu-blue;
+  text-align: right;
+}
+
+.bank-not-verified {
+  @include font-button-small;
+
+  vertical-align: text-top;
+  text-transform: uppercase;
+  line-height: 1.6;
+  letter-spacing: -.2px;
+  color: $neu-bright-orange;
+}

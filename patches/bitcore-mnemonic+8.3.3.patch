@@ -1,0 +1,13 @@
+diff --git a/node_modules/bitcore-mnemonic/lib/mnemonic.js b/node_modules/bitcore-mnemonic/lib/mnemonic.js
+index 513eb36..94de870 100644
+--- a/node_modules/bitcore-mnemonic/lib/mnemonic.js
++++ b/node_modules/bitcore-mnemonic/lib/mnemonic.js
+@@ -94,7 +94,7 @@ var Mnemonic = function(data, wordlist) {
+   });
+ };
+ 
+-Mnemonic.Words = require('./words');
++Mnemonic.Words = {"ENGLISH": require('./words/english')};
+ 
+ /**
+  * Will return a boolean if the mnemonic is valid

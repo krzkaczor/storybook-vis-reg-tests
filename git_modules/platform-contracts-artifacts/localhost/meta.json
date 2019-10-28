@@ -1,0 +1,320 @@
+{
+  "CONFIG": {
+    "Q18": "1000000000000000000",
+    "LOCK_DURATION": 46656000,
+    "PENALTY_FRACTION": "100000000000000000",
+    "START_DATE": 1567012190,
+    "CAP_EUR": "2e+26",
+    "MIN_TICKET_EUR": "290000000000000000000",
+    "ETH_EUR_FRACTION": "290000000000000000000",
+    "RESERVATION_AGREEMENT": "ipfs:QmbH7mtyWpwTxigGtvnbYJAJ9ZZPe1FDxr9hTc2mNwpRe2",
+    "NEUMARK_HOLDER_AGREEMENT": "ipfs:QmVQfuibCipv9j6v4cSYTnvkjoBnx3DqSLNY3PKg8MZbP4",
+    "addresses": {
+      "ACCESS_CONTROLLER": "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "LOCKED_ACCOUNT_ADMIN": "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "WHITELIST_ADMIN": "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "PLATFORM_OPERATOR_WALLET": "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "PLATFORM_OPERATOR_REPRESENTATIVE": "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "EURT_DEPOSIT_MANAGER": "0x9058B511C7450303F5Bc187aAf4cC25d7f7F88C6",
+      "UNIVERSE_MANAGER": "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "IDENTITY_MANAGER": "0xF08E9c0FcC6A3972c5Fd80fF7D478E0Db3091768",
+      "EURT_LEGAL_MANAGER": "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "GAS_EXCHANGE": "0x81cE04F4015077E53f01c2881865D78496861369",
+      "TOKEN_RATE_ORACLE": "0xB3E69d2637076D265bFb056bF5F35d9155535CD6",
+      "GAS_STIPEND_SERVICE": "0x29c57b5F27b249Ab3c11Badf6efc4B2308bc75Dd",
+      "INTERNAL_ETO_LISTING_API": "0xa71387d25c21a1e1F2381D7026a67492F4871BE5"
+    },
+    "MIN_DEPOSIT_AMOUNT_EUR_ULPS": "1000000000000000000",
+    "MIN_WITHDRAW_AMOUNT_EUR_ULPS": "5000000000000000000",
+    "MAX_SIMPLE_EXCHANGE_ALLOWANCE_EUR_ULPS": "25000000000000000000",
+    "EURT_WITHDRAWAL_FEE_FRAC": "5000000000000000",
+    "EURT_DEPOSIT_FEE_FRAC": "0",
+    "TOKEN_OFFERING_OPERATOR_DE": "0x798fD195575d195B9Bb9619ffb905E434f044f1D",
+    "TOKEN_OFFERING_OPERATOR_LI": "0xC35ef5DA2607C70D812cA2F317E9958910450dF1",
+    "ICBM_COMMITMENT_ADDRESS": null,
+    "UNIVERSE_ADDRESS": null,
+    "ISOLATED_UNIVERSE": false,
+    "artifacts": {
+      "ROLE_BASED_ACCESS_POLICY": "RoleBasedAccessPolicy",
+      "ETHEREUM_FORK_ARBITER": "EthereumForkArbiter",
+      "NEUMARK": "Neumark",
+      "ICBM_LOCKED_ACCOUNT": "ICBMLockedAccount",
+      "ICBM_ETHER_TOKEN": "ICBMEtherToken",
+      "ICBM_EURO_TOKEN": "ICBMEuroToken",
+      "ICBM_COMMITMENT": "MockICBMCommitment",
+      "UNIVERSE": "Universe",
+      "LOCKED_ACCOUNT": "LockedAccount",
+      "ETHER_TOKEN": "EtherToken",
+      "EURO_TOKEN": "EuroToken",
+      "EURO_TOKEN_CONTROLLER": "EuroTokenController",
+      "IDENTITY_REGISTRY": "IdentityRegistry",
+      "GAS_EXCHANGE": "SimpleExchange",
+      "PLATFORM_TERMS": "PlatformTerms",
+      "STANDARD_ETO_COMMITMENT": "MockETOCommitment",
+      "STANDARD_EQUITY_TOKEN": "EquityToken",
+      "PLACEHOLDER_EQUITY_TOKEN_CONTROLLER": "PlaceholderEquityTokenController",
+      "STANDARD_ETO_TERMS": "ETOTerms",
+      "STANDARD_SHAREHOLDER_RIGHTS": "ShareholderRights",
+      "STANDARD_DURATION_TERMS": "ETODurationTerms",
+      "STANDARD_TOKEN_TERMS": "ETOTokenTerms",
+      "FEE_DISBURSAL": "FeeDisbursal",
+      "FEE_DISBURSAL_CONTROLLER": "FeeDisbursalController",
+      "TOKEN_EXCHANGE_RATE_ORACLE": "ITokenExchangeRateOracle",
+      "ETO_TERMS_CONSTRAINTS": "MockETOTermsConstraints"
+    },
+    "shouldSkipDeployment": false,
+    "isLiveDeployment": false
+  },
+  "DEPLOYER": "0x8a194c13308326173423119f8dcb785ce14c732b",
+  "UNIVERSE_ADDRESS": "0x9bad13807cd939c7946008e3772da819bd98fa7b",
+  "ICBM_COMMITMENT_ADDRESS": "0x238f2befb74cf762346341a525a4c548f5e2e386",
+  "ROLES": {
+    "accessController": "0xac42f8beb17975ed062dcb80c63e6d203ef1c2c335ced149dc5664cc671cb7da",
+    "example": "0xb01f6215887f913abe74277c39da2c7de51baf17958191658f84959dfddab970",
+    "platformOperatorRepresentative": "0xb2b321377653f655206f71514ff9f150d0822d062a5abcf220d549e1da7999f0",
+    "lockedAccountAdmin": "0x4675da546d2d92c5b86c4f726a9e61010dce91cccc2491ce6019e78b09d2572e",
+    "neumarkBurner": "0x19ce331285f41739cd3362a3ec176edffe014311c0f8075834fdd19d6718e69f",
+    "neumarkIssuer": "0x921c3afa1f1fff707a785f953a1e197bd28c9c50e300424e015953cbf120c06c",
+    "reclaimer": "0x0542bbd0c672578966dcc525b30aa16723bb042675554ac5b0362f86b6e97dc5",
+    "snapshotCreator": "0x08c1785afc57f933523bc52583a72ce9e19b2241354e04dd86f41f887e3d8174",
+    "transferAdmin": "0xb6527e944caca3d151b1f94e49ac5e223142694860743e66164720e034ec9b19",
+    "whitelistAdmin": "0xaef456e7c864418e1d2a40d996ca4febf3a7e317fe3af5a7ea4dda59033bbe5c",
+    "eurtDepositManager": "0x7c8ecdcba80ce87848d16ad77ef57cc196c208fc95c5638e4a48c681a34d4fe7",
+    "universeManager": "0xe8d8f8f9ea4b19a5a4368dbdace17ad71a69aadeb6250e54c7b4c7b446301738",
+    "identityManager": "0x32964e6bc50f2aaab2094a1d311be8bda920fc4fb32b2fb054917bdb153a9e9e",
+    "eurtLegalManager": "0x4eb6b5806954a48eb5659c9e3982d5e75bfb2913f55199877d877f157bcc5a9b",
+    "gasExchange": "0x9fe43636e0675246c99e96d7abf9f858f518b9442c35166d87f0934abef8a969",
+    "tokenRateOracle": "0xa80c3a0c8a5324136e4c806a778583a2a980f378bdd382921b8d28dcfe965585",
+    "disburser": "0xd7ea6093d11d866c9e8449f8bffd9da1387c530ee40ad54f0641425bb0ca33b7",
+    "disbursalManager": "0x677f87f7b7ef7c97e42a7e6c85c295cf020c9f11eea1e49f6bf847d7aeae1475",
+    "companyUpgradeAdmin": "0xfef15747c403732d986b29a92a880d8f2fb886b99417c8bbef226f85885ca924"
+  },
+  "KNOWN_INTERFACES": {
+    "accessPolicy": "0xb05049d9",
+    "forkArbiter": "0x2fe7778c",
+    "neumark": "0xeb41a1bd",
+    "etherToken": "0x8cf73cf1",
+    "euroToken": "0x83c3790b",
+    "euroTokenController": "0x33ac4661",
+    "identityRegistry": "0x0a72e073",
+    "tokenExchangeRateOracle": "0xc6e5349e",
+    "feeDisbursal": "0xf4c848e8",
+    "platformPortfolio": "0xaa1590d0",
+    "tokenExchange": "0xddd7a521",
+    "gasExchange": "0x89dbc6de",
+    "euroLock": "0x2347a19e",
+    "etherLock": "0x978a6823",
+    "icbmEuroLock": "0x36021e14",
+    "icbmEtherLock": "0x0b58f006",
+    "icbmEtherToken": "0xae8b50b9",
+    "icbmEuroToken": "0xc2c6cd72",
+    "icbmCommitment": "0x7f2795ef",
+    "platformTerms": "0x75ecd7f8",
+    "universe": "0xbf202454",
+    "commitmentInterface": "0xfa0e0c60",
+    "equityTokenInterface": "0xab9885bb",
+    "equityTokenControllerInterface": "0xfa30b2f1",
+    "termsInterface": "0x9d5754ab",
+    "paymentTokenInterface": "0xb2a0042a",
+    "etoTermsConstraints": "0xce2be4f5"
+  },
+  "INTERFACE_ARTIFACTS": {
+    "accessPolicy": [
+      "RoleBasedAccessPolicy"
+    ],
+    "forkArbiter": [
+      "EthereumForkArbiter"
+    ],
+    "identityRegistry": [
+      "IdentityRegistry"
+    ],
+    "etherToken": [
+      "EtherToken"
+    ],
+    "euroToken": [
+      "EuroToken"
+    ],
+    "euroTokenController": [
+      "EuroTokenController"
+    ],
+    "etherLock": [
+      "LockedAccount"
+    ],
+    "euroLock": [
+      "LockedAccount"
+    ],
+    "neumark": [
+      "Neumark"
+    ],
+    "tokenExchangeRateOracle": [
+      "ITokenExchangeRateOracle"
+    ],
+    "gasExchange": [
+      "SimpleExchange"
+    ],
+    "feeDisbursal": [
+      "FeeDisbursal"
+    ],
+    "platformPortfolio": [
+      "IPlatformPortfolio"
+    ],
+    "tokenExchange": [],
+    "icbmEuroLock": [
+      "ICBMLockedAccount"
+    ],
+    "icbmEtherLock": [
+      "ICBMLockedAccount"
+    ],
+    "icbmEuroToken": [
+      "ICBMEuroToken"
+    ],
+    "icbmEtherToken": [
+      "ICBMEtherToken"
+    ],
+    "icbmCommitment": [
+      "ICBMCommitment"
+    ],
+    "universe": [
+      "Universe"
+    ],
+    "platformTerms": [
+      "PlatformTerms"
+    ],
+    "commitmentInterface": [
+      "ETOCommitment",
+      ""
+    ],
+    "equityTokenInterface": [
+      "EquityToken",
+      ""
+    ],
+    "equityTokenControllerInterface": [
+      "PlaceholderEquityTokenController",
+      ""
+    ],
+    "termsInterface": [
+      "ETOTerms",
+      ""
+    ],
+    "paymentTokenInterface": [
+      "IERC223Token"
+    ],
+    "etoTermsConstraints": [
+      "ETOTermsConstraints",
+      ""
+    ]
+  },
+  "NETWORK": {
+    "network_id": "17",
+    "gas": 6700000,
+    "gasPrice": 21000000000,
+    "from": "0x8a194c13308326173423119f8dcb785ce14c732b",
+    "deploymentConfigOverride": {
+      "START_DATE": 1567012190,
+      "artifacts": {
+        "ICBM_COMMITMENT": "MockICBMCommitment",
+        "STANDARD_ETO_COMMITMENT": "MockETOCommitment",
+        "ETO_TERMS_CONSTRAINTS": "MockETOTermsConstraints"
+      },
+      "addresses": {
+        "EURT_DEPOSIT_MANAGER": "0x9058B511C7450303F5Bc187aAf4cC25d7f7F88C6",
+        "IDENTITY_MANAGER": "0xF08E9c0FcC6A3972c5Fd80fF7D478E0Db3091768",
+        "GAS_EXCHANGE": "0x81cE04F4015077E53f01c2881865D78496861369",
+        "TOKEN_RATE_ORACLE": "0xB3E69d2637076D265bFb056bF5F35d9155535CD6",
+        "GAS_STIPEND_SERVICE": "0x29c57b5F27b249Ab3c11Badf6efc4B2308bc75Dd",
+        "INTERNAL_ETO_LISTING_API": "0xa71387d25c21a1e1F2381D7026a67492F4871BE5"
+      },
+      "TOKEN_OFFERING_OPERATOR_DE": "0x798fD195575d195B9Bb9619ffb905E434f044f1D",
+      "TOKEN_OFFERING_OPERATOR_LI": "0xC35ef5DA2607C70D812cA2F317E9958910450dF1"
+    },
+    "unlockedAccounts": [
+      "0x8a194c13308326173423119f8dcb785ce14c732b",
+      "0x30fd2af22459b61f5bdfddcaef9bfad6acbf9fdc",
+      "0x429123b08df32b0006fd1f3b0ef893a8993802f3",
+      "0x7f2be389e2b13da09d325332e3cb718cd751b7c6",
+      "0xba9807e260e1e162f46a5acd228153edfe2604ec",
+      "0xde185a5c2bd3913fac1f64102e3defd9e1797c4d",
+      "0x844c5c9ce2ad620592a5d686fc8e76866f039c56",
+      "0xe6ad2cdba2fb15504232ebfa82f64c06c87f9326",
+      "0x619f0a73f02b8ac8f58440c21e15a461e69011a5",
+      "0xb3a2eb675288bff642f5036235ffb541a4289e71",
+      "0x7b85041fe5e05a31a961445c3321ee426015d45f",
+      "0xdf5f67e6e4c643a2ced1f9de88a5da42e1507efd",
+      "0x7824e49353bd72e20b61717cf82a06a4eee209e8",
+      "0xa622f39780fc8722243b49acf3bffeeb9b9201f2",
+      "0x139fab72691f03ea1589a847b110096c7cd56e35",
+      "0xf7784a74cc59d1e6e1c10ca2053f34d68d280ae7",
+      "0xfa8ae4e924e14c834ad48238a55a24af97a8f3f3",
+      "0x4a20381d628aeec776335a89bb32106a8f9d4323",
+      "0x6d65815fcd587faae5dac7d6ce65de5d56bcf5e7",
+      "0xfa1af2e251ee739f83e14d7dacfd77b3d0e930b7",
+      "0xaf45584b7bcd4dc342932a41660193b80d59e35e",
+      "0x6c6f9115be53c4424016f28d916196b29ff222df",
+      "0x934e2b3d66b5725f17eb271a4ae7a35449eb5caf",
+      "0xd9f858ad167506a9d25fd6007bcdb7ae61bc5f87",
+      "0x497f87da9e8dd99865bec49207d9f04744e5e656",
+      "0xa443d169ccf4a1bb955e8756205d8db288061731",
+      "0x687ffecd89f3e150ecf8a8155ef15d794d7f347b",
+      "0x74180b56dd74bc56a2e9d5720f39247c55f23328",
+      "0x8e75544b848f0a32a1ab119e3916ec7138f3bed2",
+      "0x36cec7081d2528a42d56fc1571d6d234dd2608ec",
+      "0xc8f867cf4ed30b4ff0aa4c4c8c6b684397b219b0",
+      "0x6a57febae70bfc83c64835ea58240958fba328ff",
+      "0x95137084d1b6f58d177523de894293913394aa12",
+      "0x51305b1cc683dedf60b39e92aef52f4e09e9e781",
+      "0xd9c46960ce6be33bbed615087abbd35fda77d42c",
+      "0x239fd29638c8f42e2675d84455a632157152df46",
+      "0x0a00992aea13e8e10287b577256717aa4910a0bb",
+      "0x007ff055641147d0a170a7a73b00f0eeb2f07f12",
+      "0x4b07fd23baa7198061caed44cf470b0f20ce1b7e",
+      "0x9369dfd79049b7c3cf48d54435287b0afd5227da",
+      "0xe52df6021c75f8ddf20ab4dfc818bce84f7cbd5d",
+      "0x798fd195575d195b9bb9619ffb905e434f044f1d",
+      "0xc35ef5da2607c70d812ca2f317e9958910450df1",
+      "0x07d8b4d97f7b21020b332367692e11fdd5036d7b",
+      "0x62b3f983f037828d76b4925655cc083cfdcd9e13",
+      "0x6e577c22f1c5f0021a057cfce67ac7e630de38f7",
+      "0x2824a394b5a3386b3140bc426e40e24217f0a42f",
+      "0x8b5ececafecc6335fcba939328898d4a3088f906",
+      "0x68b4b0274148f062f919c410a8c36078c03398bb",
+      "0x766bd4b833738fee9af4d1f330733c489a5f87b7",
+      "0x72969bf8de31c47380ce21eebc75bef26ce31153",
+      "0x0566dea0412dc4bcb9ef0c4d884e56dadefcb7f3",
+      "0x0d54192b7c8f126dcd946ffd03e336b24052edf2",
+      "0x353d3030af583fc0e547da80700bbd953f330a4b",
+      "0x5c104a588e47209b7248f4ea17996e9e69a6adfc",
+      "0x9cfe167f8f2b9d6a8a6311a766ffb63648e69c04",
+      "0x4fd82e066c68ddadfc99f98cb4eb50de4b855a18",
+      "0x5989e17add9568a715e8330ed5fac1540161c961",
+      "0x87447bf7d8e1229122b1b088d6eef07703457ace",
+      "0xf73f063634e0250c5afa2f72431e3f4783379c24",
+      "0xcb9e5e4cd1267653d5787181fec6202c016277a1",
+      "0x6d0c98717ce99e830dd0ec449e8c52b4915565ac",
+      "0xe33784584ece52976a0742b50e6d60c2cf76980f",
+      "0xe8ee4200877df51a5d871d4e7b6181a7168445d8",
+      "0x73174ee5b22cf9ba4413bae663631c5c9c996d3e",
+      "0xc5c10adbd1a1a835904908fbd734dd729ad6980a",
+      "0x92a0f60de33f5f0952f8c60336dc6b8133e3db5d",
+      "0xb0dc0110d14e483ce3a43390fdd185ba458769a9",
+      "0x8d6df43c57d4fbc12948bb7fa8ee87af72dac1a0",
+      "0x504332afbcba7d4a71d5aa432f4b8c54d5b1626a",
+      "0x9679ce376a40700e889e57f736b4d52de7806c39",
+      "0x557eab5fd06158efc3a892b6027c88fe4d44fc17",
+      "0x9bb148c453a6aea6759695c8da0d0918c8f494e9",
+      "0xb26d72cf6cfb529fb71f78dedbf21f608cfc43fa",
+      "0x1aaf365cc3b782d92471f487de08d5706896a512",
+      "0xcb6470fa4b5d56c8f494e7c1ce56b28c548931a6",
+      "0x1ebf9e9ffed78da0e2576916cf6f925def358020",
+      "0xebfb2d6f2cb7c13d82cb3027ac6bad07cc416bc8",
+      "0x3cbf04332fccd88b1413430e5ea89c9bd4ca0bd0",
+      "0xafb3af3243a95fefa75be1282d3739ca696fe31d",
+      "0x20879bba708b97b795fcd39d15a47caf83165d1e",
+      "0x5ebe8ef595f45e1e6dee0d629c899cae5170b884",
+      "0x5a72dce8025165c416f77739c157403e978738de",
+      "0x9bc06f070f3759ff9b4c7dc0e47b67296f7a5e72",
+      "0x3ddd82c6b1ad4f4d4567626307f1868cdfebcbb9"
+    ]
+  },
+  "HEAD_BLOCK_NO": 651,
+  "INITIAL_BLOCK_NO": 152
+}

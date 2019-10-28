@@ -1,0 +1,78 @@
+.heading-wrapper {
+  position: relative;
+  max-width: 100%;
+
+  &.has-decorator {
+    margin-left: 0;
+    padding-left: px-to-rem(10px);
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $neu-piss-yellow;
+      height: 100%;
+      width: 2px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &.size-small {
+    .heading {
+      @include font-label;
+    }
+
+    .description {
+      @include font-button-small;
+    }
+  }
+
+  &.size-huge {
+    .heading {
+      @include font-headline;
+    }
+
+    .description {
+      @include font-default;
+    }
+  }
+
+  .heading {
+    @include font-default;
+
+    position: relative;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    &.has-icon {
+      padding-left: 2.4em;
+    }
+
+    .icon {
+      // should match heading height + 2px
+      // but not change overall heading height
+      position: absolute;
+      left: 0;
+      top: -1px;
+      height: calc(100% + 2px);
+    }
+
+  }
+
+  .disable-transform {
+    text-transform: inherit;
+  }
+
+  .inherit-font {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  .description {
+    @include font-button-default;
+    margin-bottom: 0;
+  }
+}

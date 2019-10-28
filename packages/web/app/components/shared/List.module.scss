@@ -1,0 +1,25 @@
+.list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+
+  > .item {
+    padding-top: .3em;
+    padding-bottom: .3em;
+
+    &--success {
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 1.2em;
+        width: 1.2em;
+        background: url("../../assets/img/notifications/success.svg") no-repeat $green-light;
+        border-radius: 50%;
+        vertical-align: text-top;
+        margin-right: .5em;
+      }
+    }
+  }
+}
+
+

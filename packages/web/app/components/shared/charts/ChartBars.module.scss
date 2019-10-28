@@ -1,0 +1,19 @@
+.chart-bars {
+  position: relative;
+  display: flex;
+
+  > {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .chart-wrapper {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .legend-wrapper {
+    margin-left: auto;
+    padding-left: px-to-rem(10px);
+  }
+}

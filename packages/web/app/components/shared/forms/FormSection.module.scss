@@ -1,0 +1,18 @@
+.form-section {
+  display: grid;
+  grid-template: auto auto / auto;
+  grid-column-gap: 2rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 1000px) {
+    & {
+      grid-template: auto / 1fr 6fr;
+    }
+  }
+}
+
+.title {
+  @include font-default;
+
+  text-transform: uppercase;
+}

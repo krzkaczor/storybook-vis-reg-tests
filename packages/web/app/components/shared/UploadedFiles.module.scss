@@ -1,0 +1,52 @@
+.file {
+  background-color: transparent;
+  transition: 150ms ease-out background-color;
+  display: flex;
+  flex-direction: row-reverse;
+  user-select: none;
+  cursor: default;
+
+  > * {
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background-color: $neu-pale-blue;
+
+    .remove {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  .icon,
+  .remove {
+    width: 16px;
+  }
+
+  .remove {
+    cursor: pointer;
+    margin-left: auto;
+    width: px-to-rem(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 150ms ease-out color;
+
+    &:hover {
+      color: $neu-red;
+
+      & ~ .text {
+        color: $neu-red;
+      }
+    }
+  }
+
+  .text {
+    margin: 0 px-to-rem(12px);
+    flex: 1;
+    max-width: calc(100% - #{px-to-rem(40px)});
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 150ms ease-out color;
+  }
+}

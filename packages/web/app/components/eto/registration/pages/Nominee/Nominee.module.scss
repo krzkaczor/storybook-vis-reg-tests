@@ -1,0 +1,113 @@
+.header {
+  @include font-headline-medium;
+
+  margin-bottom: $spacing-vertical-lg-2;
+  text-align: center;
+}
+
+.form {
+  @media(min-width: 576px) {
+    padding: $spacing-vertical-lg-4 $spacing-vertical-lg-2 $spacing-vertical-lg-2;
+  }
+
+  align-self: stretch;
+  justify-content: stretch;
+  display: grid;
+  grid-template: auto auto auto 1fr / 1fr;
+  grid-gap: 1rem;
+  justify-items: stretch;
+
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nominee-chosen-section {
+  display: grid;
+  grid-template-areas:
+  "text"
+  "nominee"
+  "button-block";
+  grid-gap: 1rem;
+
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.nominee-block {
+  @include font-headline-small-roboto;
+
+  grid-area: nominee;
+
+  color: $neu-charcoal-grey;
+
+  display: grid;
+  grid-gap: .5em;
+  padding: .8em;
+  border-radius: 4px;
+  border: solid 1px $neu-light-blue-grey-two;
+
+  word-break: break-word;
+
+  .nominee-name {
+    font-weight: bold;
+  }
+
+  .nominee-address {
+    font-size: .8em;
+  }
+}
+
+.text {
+  grid-area: text;
+  margin-bottom: 0;
+}
+
+.button {
+  grid-area: button-block;
+  justify-self: flex-start;
+}
+
+
+.pending-nominee-request {
+  display: grid;
+  grid-template: auto 1fr auto / auto;
+  grid-template-areas: "text" "info" "button-block";
+  grid-gap: 20px;
+
+  font-family: $font-family-roboto;
+  font-size: 16px;
+
+  h5 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.pending-nominee-request-text {
+  grid-area: text;
+}
+
+.pending-nominee-request-info {
+  grid-area: info;
+
+  display: grid;
+  grid-template: auto / repeat(2, auto);
+  grid-gap: 1rem;
+}
+
+.button-block {
+  grid-area: button-block;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1rem;
+  justify-items: flex-start;
+
+  margin-top: 1rem;
+}

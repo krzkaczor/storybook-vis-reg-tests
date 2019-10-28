@@ -1,0 +1,18 @@
+.icon {
+  height: px-to-rem(16px);
+  width: px-to-rem(16px);
+}
+
+.content {
+  @include make-col-ready;
+  text-align: center;
+}
+
+.image {
+  width: px-to-rem(375px);
+  height: px-to-rem(208px);
+  @media (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "sm")) {
+    width: px-to-rem(300px);
+    height: px-to-rem(156px);
+  }
+}

@@ -1,0 +1,24 @@
+.content {
+  height: px-to-rem(260px);
+}
+
+.step-card-wrapper {
+  @include media-breakpoint-up (sm) {
+    grid-auto-flow: column;
+    margin-top: 2.5rem;
+  }
+
+  display: grid;
+  grid-template: auto / 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  grid-gap: 1.5rem;
+}
+
+.proceed-button {
+  @include media-breakpoint-up (sm) {
+    margin: 3rem auto;
+  }
+
+  margin: 1rem auto 0;
+}

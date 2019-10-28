@@ -1,0 +1,15 @@
+.warning-alert {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem;
+  color: $neu-bright-orange;
+  font-size: $font-size-sm;
+
+  .icon {
+    font-size: 1.4em;
+    vertical-align: text-bottom;
+  }
+}

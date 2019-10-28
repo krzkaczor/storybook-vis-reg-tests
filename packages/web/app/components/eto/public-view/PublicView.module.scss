@@ -1,0 +1,65 @@
+.people-carousel-wrapper {
+  padding: 0 25px;
+}
+
+.people-carousel-slide-content {
+  display: flex;
+}
+
+.people-carousel-image {
+  @include rect(48px);
+
+  flex-shrink: 0;
+  margin-right: 14px;
+
+  &,
+  img {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
+
+.people-carousel-name {
+  @include font-headline-medium;
+
+  color: $color-black;
+  font-weight: $font-weight-bold;
+}
+
+.people-carousel-title {
+  @include font-headline-medium;
+
+  color: $neu-greyish-brown;
+  font-weight: $font-weight-bold;
+}
+
+.people-carousel-bio {
+  color: $neu-greyish-brown;
+}
+
+.header-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote {
+  font-size: px-to-rem(16px);
+  line-height: px-to-rem(17px);
+  letter-spacing: px-to-rem(-.1px);
+  font-style: italic;
+  font-weight: $font-weight-bold;
+}
+
+.doughnut {
+  max-height: px-to-rem(240);
+}
+
+.twitter {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.eto-layout {
+  margin-top: 0;
+}

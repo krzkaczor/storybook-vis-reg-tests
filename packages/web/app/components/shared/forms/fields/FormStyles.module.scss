@@ -1,0 +1,96 @@
+.note-label {
+  min-height: px-to-rem(21px);
+  padding: px-to-rem(5px) px-to-rem(5px) 0;
+  text-align: right;
+}
+
+.addon {
+  &:global(.is-invalid) {
+    border-color: $neu-red;
+  }
+
+  > :global(.input-group-text) {
+    background-color: transparent;
+    padding: 0 0 px-to-rem(4px) px-to-rem(10px);
+    border: 0;
+    border-bottom: 1px solid $neu-greyish-brown;
+  }
+}
+
+.input-field {
+  &:disabled {
+    color: $neu-slate-grey;
+    cursor: not-allowed;
+
+    &::placeholder {
+      color: $neu-silver;
+    }
+  }
+}
+
+.input-meta {
+  @include font-thin;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.bottom-border {
+  border-bottom: 1px solid $neu-greyish-brown;
+}
+
+.box {
+  line-height: px-to-rem(46px);
+
+  &:first-child {
+    border: 1px solid $neu-gull-gray;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    height: px-to-rem(46px);
+    padding: 12px 0 12px 16px;
+  }
+
+  &:first-child ~ .addon {
+    & > :global(.input-group-text) {
+      @include font-default;
+
+      font-size: px-to-rem(20px);
+      border: 1px solid $neu-gull-gray;
+      border-left: 0;
+      padding: 0 8px 0 6px;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  &:last-child {
+    border: 1px solid $neu-gull-gray;
+    border-left: 0;
+    height: px-to-rem(46px);
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:last-child ~ .addon {
+    & > :global(.input-group-text) {
+      @include font-default;
+
+      font-size: px-to-rem(20px);
+      border: 1px solid $neu-gull-gray;
+      border-right: 0;
+      padding-left: 6px;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  &:only-child {
+    border: 1px solid $neu-gull-gray;
+    border-radius: 4px;
+    height: px-to-rem(46px);
+    padding: 12px 16px;
+  }
+}
+
+.icon {
+  @include rect(34px);
+
+  margin-left: 8px;
+}

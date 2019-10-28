@@ -1,0 +1,25 @@
+$_side-padding: 12px;
+
+.input-wrapper {
+  display: flex;
+  border: 1px solid $neu-greyish-brown;
+  padding: 10px $_side-padding;
+
+  &:global(.is-valid) {
+    border-color: $neu-seaweed;
+  }
+
+  &:global(.is-invalid) {
+    border-color: $neu-bright-orange;
+  }
+
+  :global(.form-control) {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.addon {
+  flex-shrink: 0;
+  margin-left: $_side-padding;
+}

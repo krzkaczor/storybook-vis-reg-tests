@@ -1,0 +1,15 @@
+.description {
+  $_padding-side: 10px;
+
+  @include responsive-size(margin-top, $spacing-vertical-sm-1, $spacing-vertical-lg-1);
+  @include responsive-size(padding-left, 0, $_padding-side);
+  @include responsive-size(padding-right, 0, $_padding-side);
+
+  font-size: px-to-rem(12px);
+  text-align: center;
+  letter-spacing: px-to-rem(-.2px);
+}
+
+.link-wrapper {
+  text-align: center;
+}
