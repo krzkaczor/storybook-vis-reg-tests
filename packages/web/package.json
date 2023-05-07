@@ -145,7 +145,7 @@
     "ignore-styles": "^5.0.1",
     "jsdom": "^11.11.0",
     "jsdom-global": "^3.0.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lint-staged": "^8.1.7",
     "lolex": "kylefleming/lolex#d683851fedb7237b9e5606ee139090ed71378842",
     "mini-css-extract-plugin": "^0.5.0",
